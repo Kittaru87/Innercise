@@ -8,7 +8,7 @@ RSpec.feature 'Pull up list of videos', type: :feature do
   end
 
   it 'can navigate to the correct workout page' do
-    click_button 'Arms'
+    click_link 'Arms'
     expect(page).to have_content('Arm workouts')
   end
 end

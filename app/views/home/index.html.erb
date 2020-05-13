@@ -12,12 +12,14 @@
 
     <section>
 
-    <%= link_to workout_path(:id => "arms") do %>
+    <%= link_to workouts_arms_path, :id => "arms" do %>
       <button>
         Arms
       </button>
     <% end %>
 
+    <% 
+=begin %>  
     <%= link_to workout_path(:id => "shoulders") do %>
       <button>
         Shoulders
@@ -53,7 +55,8 @@
         Legs
       </button>
     <% end %>
-    
+    <% 
+=end %>
     </section>
 
 <script>

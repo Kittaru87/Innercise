@@ -3,9 +3,9 @@
 Rails.application.routes.draw do
   get 'home/index'
 
-  resources :workouts
+  # resources :workouts
 
-  # get '/workouts/arms'
+  get '/workouts/arms'
 
   root 'home#index'
 end
