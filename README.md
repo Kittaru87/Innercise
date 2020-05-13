@@ -6,7 +6,13 @@ Help move your exercise inside.
 
 * ...
 
-- keeping controllers skinny by having a services folder for bits of code that can be called in the controller
+**mvp**
+
+- button for arm workouts
+- press button
+- navigate to an arms workout page
+- a selection (10) youtube videos to display either as a scroll down list or a horizontal scroll list that you navigate one at a time.
+- idea to have the API call in the workouts helper to keep the workouts controller skinny - the show method can the id of the button, push that into the api call then output a different playlist per button interaction.
 
 Resources:
 https://github.com/Fullscreen/yt#configuring-your-app
