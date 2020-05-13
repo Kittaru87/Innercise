@@ -8,9 +8,10 @@ RSpec.feature 'Pull up list of videos', type: :feature do
     visit '/'
   end
 
-  it 'can show a list of videos for arm exercises' do
+  it 'can navigate to the correct workout page' do
     click_button 'Arms'
     expect(page).to have_content('Arm workouts')
   end
+
 
 end
