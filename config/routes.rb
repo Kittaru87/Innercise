@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   get 'home/index'
-   
-  get 'workouts/arms'
   
+  resources :workouts
+  
+  get 'workouts/arms'
+
   root 'home#index'
 
 end

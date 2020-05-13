@@ -1,5 +1,8 @@
 # Innercise
 
+Help move your exercise inside.
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
@@ -23,6 +26,8 @@ Things you may want to cover:
 
 * ...
 
+- keeping controllers skinny by having a services folder for bits of code that can be called in the controller
+
 Resources:
 https://github.com/Fullscreen/yt#configuring-your-app
 
@@ -39,3 +44,5 @@ https://stackoverflow.com/questions/18804904/retrieve-all-videos-from-youtube-pl
 https://github.com/turbolinks/turbolinks#working-with-script-elements
 
 https://stackoverflow.com/questions/30950529/jquery-ajax-call-to-be-triggered-onclick/30950571
+
+https://blog.engineyard.com/keeping-your-rails-controllers-dry-with-services
