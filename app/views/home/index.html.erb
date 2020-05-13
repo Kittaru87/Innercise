@@ -11,9 +11,12 @@
     </header>
 
     <section>
-    <button href="arms" id="arms">
-      Arms
-    </button>
+
+    <%= link_to workouts_arms_path do %>
+      <button id="arms">
+        Arms
+      </button>
+    <% end %>
     <button>
       Shoulders
     </button>
