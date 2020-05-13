@@ -3,7 +3,6 @@
 require 'rails_helper'
 
 RSpec.feature 'Pull up list of videos', type: :feature do
-
   before(:each) do
     visit '/'
   end
@@ -12,6 +11,4 @@ RSpec.feature 'Pull up list of videos', type: :feature do
     click_button 'Arms'
     expect(page).to have_content('Arm workouts')
   end
-
-
 end

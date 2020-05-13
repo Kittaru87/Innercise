@@ -1,14 +1,11 @@
-class WorkoutsController < ApplicationController
+# frozen_string_literal: true
 
-  def index
-  end
+class WorkoutsController < ApplicationController
+  def index; end
 
   def new
     @workout = Workout.new
   end
 
-  def show
-
-  end
-  
+  def show; end
 end
