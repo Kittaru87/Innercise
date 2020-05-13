@@ -37,6 +37,8 @@ https://stackoverflow.com/questions/41111058/how-do-i-get-the-youtube-api-to-loa
 
 https://stackoverflow.com/questions/42711959/play-youtube-video-on-
 
+https://github.com/googleapis/google-api-ruby-client
+
 https://developers.google.com/youtube/v3/docs/search/list#usage
 
 https://stackoverflow.com/questions/18804904/retrieve-all-videos-from-youtube-playlist-using-youtube-v3-api

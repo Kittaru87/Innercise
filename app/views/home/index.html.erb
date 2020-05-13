@@ -12,30 +12,48 @@
 
     <section>
 
-    <%= link_to workouts_arms_path do %>
-      <button id="arms">
+    <%= link_to workout_path(:id => "arms") do %>
+      <button>
         Arms
       </button>
     <% end %>
+
+    <%= link_to workout_path(:id => "shoulders") do %>
+      <button>
+        Shoulders
+      </button>
+    <% end %>
     
-    <button>
-      Shoulders
-    </button>
-    <button>
-      Chest
-    </button>
-    <button>
-      Back
-    </button>
-    <button>
-      Core
-    </button>
-    <button>
-      Glutes
-    </button>
-    <button>
-      Legs
-    </button>
+    <%= link_to workout_path(:id => "chest") do %>
+      <button>
+        Chest
+      </button>
+    <% end %>
+
+    <%= link_to workout_path(:id => "back") do %>
+      <button>
+        Back
+      </button>
+    <% end %>
+
+    <%= link_to workout_path(:id => "core") do %>
+      <button>
+        Core
+      </button>
+    <% end %>
+   
+    <%= link_to workout_path(:id => "glutes") do %>
+      <button>
+        Glutes
+      </button>
+    <% end %>
+
+    <%= link_to workout_path(:id => "legs") do %>
+      <button>
+        Legs
+      </button>
+    <% end %>
+    
     </section>
 
 <script>
