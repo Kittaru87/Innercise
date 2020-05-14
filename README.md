@@ -31,6 +31,10 @@ https://stackoverflow.com/questions/30950529/jquery-ajax-call-to-be-triggered-on
 
 https://blog.engineyard.com/keeping-your-rails-controllers-dry-with-services
 
+Using HTTParty - https://medium.com/@corinnemariekelly/how-to-use-an-api-in-your-rails-application-2b046cfdfdfd
+
+https://stackoverflow.com/questions/40252904/move-api-call-from-controller-to-model-in-rails/40253044
+
 **Embedding videos in rails**
 https://gorails.com/forum/embed-youtube-video-in-rails-app
 
