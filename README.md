@@ -23,11 +23,6 @@ https://stackoverflow.com/questions/41111058/how-do-i-get-the-youtube-api-to-loa
 
 https://stackoverflow.com/questions/42711959/play-youtube-video-on-
 
-https://github.com/googleapis/google-api-ruby-client
-
-
-https://developers.google.com/youtube/v3/docs/search/list#usage
-
 https://stackoverflow.com/questions/18804904/retrieve-all-videos-from-youtube-playlist-using-youtube-v3-api
 
 https://github.com/turbolinks/turbolinks#working-with-script-elements
@@ -36,7 +31,23 @@ https://stackoverflow.com/questions/30950529/jquery-ajax-call-to-be-triggered-on
 
 https://blog.engineyard.com/keeping-your-rails-controllers-dry-with-services
 
+**Embedding videos in rails**
+https://gorails.com/forum/embed-youtube-video-in-rails-app
+
+https://stackoverflow.com/questions/8272026/embed-youtube-video-in-rails
+
+**Google API for youtube - code as well**
+
+https://developers.google.com/youtube/v3/docs/search/list#usage
+
+https://github.com/googleapis/google-api-ruby-client
+
+
+https://github.com/youtube/api-samples/blob/master/ruby/search.rb
+
 https://github.com/googleapis/google-api-ruby-client/blob/master/generated/google/apis/youtube_v3/classes.rb
+
+https://github.com/googleapis/google-api-ruby-client/tree/master/generated/google/apis/youtube_v3
 
 From Youtube_v3/classes.rb
 
