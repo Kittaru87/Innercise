@@ -26,13 +26,13 @@ module WorkoutsHelper
     if Rails.env.test?
       mock_video_array
     else
-      video_array
+      video_array(_response_hash)
     end
   end
 
   private
 
-  def video_array
+  def video_array(response_hash)
     video_array = []
     response_hash['items'].each do |video|
       video_array << {
