@@ -26,7 +26,9 @@ gem 'jbuilder', '~> 2.7'
 # Securely configure Rails applications
 gem 'figaro'
 
+# API calls
 gem 'google-api-client'
+gem 'httparty'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
