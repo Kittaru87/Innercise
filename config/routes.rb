@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :workouts
 
-  get '/workouts/arms', to: 'workouts#show(:id)'
+  # get '/workouts/arms', to: 'workouts#show'
 
   root 'home#index'
 end

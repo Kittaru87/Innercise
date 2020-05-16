@@ -10,8 +10,8 @@ class WorkoutsController < ApplicationController
   # end
 
   def show
-    workout_id = params[:id]
-    videos = api_call(workout_id)
+    @workout_id = params[:id]
+    videos = api_call(@workout_id)
     @workout = pull_video_info(videos)
     redirect_to workouts_path
   end
