@@ -11,8 +11,6 @@ class WorkoutsController < ApplicationController
 
   # def show(id:)
   #   videos = api_call(id:)
-  
-  
-  # end
 
+  # end
 end

@@ -23,54 +23,64 @@ module WorkoutsHelper
   end
 
   def pull_video_info(response_hash)
-
-    video_array = []
-
-    response_hash["items"].each do |video|
-      video_array << {
-        "videoId" => video["id"]["videoId"],
-        "title" => video["snippet"]["title"],
-        "description" => video["snippet"]["description"],
-        "channel" => video["snippet"]["channelTitle"]
-      }
-    end  
-
-    video_array
-
+    if Rails.env.test?
+      mock_video_array
+    else
+      video_array = []
+      response_hash['items'].each do |video|
+        video_array << {
+          'videoId' => video['id']['videoId'],
+          'title' => video['snippet']['title'],
+          'description' => video['snippet']['description'],
+          'channel' => video['snippet']['channelTitle']
+        }
+      end
+      video_array
+    end
   end
-  
+
+  private
+
+  def mock_video_array
+    video_array = [{
+      'videoId' => '12345',
+      'title' => 'mock video',
+      'description' => 'test',
+      'channel' => 'mock channel'
+    }]
+  end
 end
 
 # Example of JSON
-#   { "kind"=>"youtube#searchResult", 
-#     "etag"=>"Tc436ZKRIDGOYwDagkJ_RtM0EdE", 
+#   { "kind"=>"youtube#searchResult",
+#     "etag"=>"Tc436ZKRIDGOYwDagkJ_RtM0EdE",
 #     "id"=>{
-#       "kind"=>"youtube#video", 
-#       "videoId"=>"V1Yc8JZlHKM"}, 
+#       "kind"=>"youtube#video",
+#       "videoId"=>"V1Yc8JZlHKM"},
 #     "snippet"=>{
-#       "publishedAt"=>"2020-04-12T15:00:17Z", 
-#       "channelId"=>"UCIJwWYOfsCfz6PjxbONYXSg", 
-#       "title"=>"Toned Arms at Home Workout! Apartment Friendly ☺️", 
-#       "description"=>"I asked you guys what workouts you wanna do at home and a lot of you asked for weights. And because not everyone has dumbbells, I decided to get creative.", 
+#       "publishedAt"=>"2020-04-12T15:00:17Z",
+#       "channelId"=>"UCIJwWYOfsCfz6PjxbONYXSg",
+#       "title"=>"Toned Arms at Home Workout! Apartment Friendly ☺️",
+#       "description"=>"I asked you guys what workouts you wanna do at home and a lot of you asked for weights. And because not everyone has dumbbells, I decided to get creative.",
 #         "thumbnails"=>{
 #           "default"=>{
-#             "url"=>"https://i.ytimg.com/vi/V1Yc8JZlHKM/default.jpg", 
-#             "width"=>120, 
+#             "url"=>"https://i.ytimg.com/vi/V1Yc8JZlHKM/default.jpg",
+#             "width"=>120,
 #             "height"=>90
-#           }, 
+#           },
 #           "medium"=>{
-#             "url"=>"https://i.ytimg.com/vi/V1Yc8JZlHKM/mqdefault.jpg", 
-#             "width"=>320, 
+#             "url"=>"https://i.ytimg.com/vi/V1Yc8JZlHKM/mqdefault.jpg",
+#             "width"=>320,
 #             "height"=>180
-#           }, 
+#           },
 #           "high"=>{
-#             "url"=>"https://i.ytimg.com/vi/V1Yc8JZlHKM/hqdefault.jpg", 
-#             "width"=>480, 
+#             "url"=>"https://i.ytimg.com/vi/V1Yc8JZlHKM/hqdefault.jpg",
+#             "width"=>480,
 #             "height"=>360
 #           }
-#         }, 
-#       "channelTitle"=>"blogilates", 
-#       "liveBroadcastContent"=>"none", 
+#         },
+#       "channelTitle"=>"blogilates",
+#       "liveBroadcastContent"=>"none",
 #       "publishTime"=>"2020-04-12T15:00:17Z"
 #     }
 #   }
