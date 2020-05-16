@@ -2,3 +2,16 @@
 <header>
   <h2>Arm workouts</h2>
 </header>
+<section>
+  <% @workout.each do |video| %>
+    <div>
+      <h3><%= video["title"] %></h3>
+      </br>
+      <p><%= video["description"] %></p>
+      </br>
+      <p><%= video["channel"] %></p>
+      </br>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/"+<%=video["id"]%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  <% end %>
+</section>
