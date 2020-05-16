@@ -9,8 +9,9 @@ class WorkoutsController < ApplicationController
   #   @workout = Workout.new
   # end
 
-  # def show(id:)
-  #   videos = api_call(id:)
+  # def show(params[:id])
+  #   videos = api_call(:id)
+  #   workout_array = pull_video_info(videos)
 
   # end
 end

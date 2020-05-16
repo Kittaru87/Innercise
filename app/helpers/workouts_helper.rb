@@ -22,24 +22,28 @@ module WorkoutsHelper
     response_hash = JSON.parse(response)
   end
 
-  def pull_video_info(response_hash)
+  def pull_video_info(_response_hash)
     if Rails.env.test?
       mock_video_array
     else
-      video_array = []
-      response_hash['items'].each do |video|
-        video_array << {
-          'videoId' => video['id']['videoId'],
-          'title' => video['snippet']['title'],
-          'description' => video['snippet']['description'],
-          'channel' => video['snippet']['channelTitle']
-        }
-      end
       video_array
     end
   end
 
   private
+
+  def video_array
+    video_array = []
+    response_hash['items'].each do |video|
+      video_array << {
+        'videoId' => video['id']['videoId'],
+        'title' => video['snippet']['title'],
+        'description' => video['snippet']['description'],
+        'channel' => video['snippet']['channelTitle']
+      }
+    end
+    video_array
+  end
 
   def mock_video_array
     video_array = [{
