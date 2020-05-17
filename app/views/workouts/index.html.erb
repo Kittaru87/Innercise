@@ -10,7 +10,7 @@
     <h1>Innercise</h1>
   </header>
     
-  <%= render partial: "workouts/arms" if @workout_id == "arms" %> 
+  <%= render partial: "arms", locals: { workouts: @workouts }%> 
 
 
   </body>

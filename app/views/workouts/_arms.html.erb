@@ -3,15 +3,15 @@
   <h2>Arm workouts</h2>
 </header>
 <section>
-  <% @workout.each do |video| %>
+  <% workouts.each do |workout| %>
     <div>
-      <h3><%= video["title"] %></h3>
+      <h3><%= workout["title"] %></h3>
       </br>
-      <p><%= video["description"] %></p>
+      <p><%= workout["description"] %></p>
       </br>
-      <p><%= video["channel"] %></p>
+      <p><%= workout["channel"] %></p>
       </br>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/"+<%=video["id"]%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/"+<%=workout["id"]%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   <% end %>
 </section>

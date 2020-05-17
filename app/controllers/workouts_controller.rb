@@ -3,16 +3,20 @@
 class WorkoutsController < ApplicationController
   include WorkoutsHelper
 
-  def index; end
+  def index 
+    @workouts = show
+    puts @workouts
+  end
 
   # def new
-  #   @workout = Workout.new
+  #   @workout = Workouts.new
   # end
 
   def show
     @workout_id = params[:id]
     videos = api_call(@workout_id)
-    @workout = pull_video_info(videos)
-    redirect_to workouts_path
+    @workouts = pull_video_info(videos)
+    redirect_to workouts_path(id: @workout_id)
+    @workouts
   end
 end

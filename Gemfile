@@ -7,8 +7,9 @@ ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# Use pg as the database for Active Record
+gem 'pg'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -25,6 +26,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 # Securely configure Rails applications
 gem 'figaro'
+# To store more data in session than rails usually allows - this will store it in Active Record
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
 # API calls
 gem 'google-api-client'
