@@ -16,6 +16,15 @@
 
  @import "bootstrap/scss/bootstrap";
 
+ body {
+  font-family: 'Comfortaa', medium;
+ }
+
+ h2 {
+  font-family: 'Comfortaa', bold;
+  margin-block-end: 2em;
+ }
+
  a {
    color: #156064;
    font-family: 'Comfortaa', bold;
@@ -27,4 +36,8 @@
 
  a:hover {
    color: #FB8F67;
+ }
+
+ .video-div {
+   margin: 1em;
  }

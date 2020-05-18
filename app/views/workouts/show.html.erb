@@ -6,14 +6,9 @@
     <title>Innercise</title>
   </head>
   <body>
-  <nav>  
-    <header>
-      <h1>Innercise</h1>
-    </header>
     <%= link_to root_path do %>
        <button>Back</button>
     <% end %>
-  </nav>
   
   <% if @workouts.empty? %>
     <p> Sorry no videos because quota has been reached </p>
