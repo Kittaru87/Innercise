@@ -9,8 +9,11 @@
   <header>
     <h1>Innercise</h1>
   </header>
-    
-  <%= render partial: "workouts", locals: { workouts: @workouts, id: @workout_id } %> 
+  <% if @workouts.empty? %>
+    <p> Sorry no videos because quota has been reached </p>
+  <% else %>  
+    <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id } %> 
+  <% end %>
 
 
   </body>
