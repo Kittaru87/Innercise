@@ -7,6 +7,5 @@ class WorkoutsController < ApplicationController
     @workout_id = params[:id]
     videos = api_call(@workout_id)
     @workouts = pull_video_info(videos)
-    puts @workouts
   end
 end
