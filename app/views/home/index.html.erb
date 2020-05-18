@@ -8,8 +8,8 @@
   <body>  
 
     <section>
-    <div class="row">
-      <div class="card col-sm-6" style="width: 18rem;">
+    <div class="row ml-1 mr-1">
+      <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
         <%= link_to workout_path(:id => "arms") do %>
           <img class="card-img-top" src="..." alt="Card image cap">
           <div class="card-body">
@@ -18,7 +18,7 @@
           </div>
         <% end %>
       </div>
-      <div class="card col-sm-6" style="width: 18rem;">
+      <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
         <%= link_to workout_path(:id => "shoulders") do %>
           <img class="card-img-top" src="..." alt="Card image cap">
           <div class="card-body">
@@ -28,8 +28,8 @@
       </div>
     </div>   
 
-    <div class="row">
-      <div class="card col-sm-6" style="width: 18rem;">
+    <div class="row ml-1 mr-1">
+      <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
         <%= link_to workout_path(:id => "chest") do %>
           <img class="card-img-top" src="..." alt="Card image cap">
           <div class="card-body">
@@ -37,7 +37,7 @@
           </div>
         <% end %>
       </div>
-      <div class="card col-sm-6" style="width: 18rem;">
+      <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
         <%= link_to workout_path(:id => "back") do %>
           <img class="card-img-top" src="..." alt="Card image cap">
           <div class="card-body">
@@ -47,8 +47,8 @@
       </div>
     </div> 
 
-    <div class="row">
-      <div class="card col-sm-6" style="width: 18rem;">
+    <div class="row ml-1 mr-1">
+      <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
         <%= link_to workout_path(:id => "core") do %>
           <img class="card-img-top" src="..." alt="Card image cap">
           <div class="card-body">
@@ -56,7 +56,7 @@
           </div>
         <% end %>
       </div>
-      <div class="card col-sm-6" style="width: 18rem;">
+      <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
         <%= link_to workout_path(:id => "glutes") do %>
           <img class="card-img-top" src="..." alt="Card image cap">
           <div class="card-body">
@@ -66,12 +66,20 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="card col-sm-12" style="width: 18rem;">
+    <div class="row ml-1 mr-1">
+      <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
         <%= link_to workout_path(:id => "legs") do %>
           <img class="card-img-top" src="..." alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title text-center">LEGS</h5>
+          </div>
+        <% end %>
+      </div>
+      <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
+        <%= link_to workout_path(:id => "yoga") do %>
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title text-center">YOGA</h5>
           </div>
         <% end %>
       </div>
