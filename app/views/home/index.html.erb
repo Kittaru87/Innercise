@@ -11,7 +11,7 @@
     <div class="row ml-1 mr-1">
       <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
         <%= link_to workout_path(:id => "arms") do %>
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <%= image_tag 'anastase-maragos-arms', class: 'card-img-top', alt: 'Card image cap' %>
           <div class="card-body">
             <h5 class="card-title text-center">ARMS</h5>
             <h6 class="card-subtitle mb-2 text-muted text-center">Exercises for biceps and triceps</h6>
@@ -20,45 +20,45 @@
       </div>
       <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
         <%= link_to workout_path(:id => "shoulders") do %>
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <%= image_tag 'john-arano-shoulders', class: 'card-img-top', alt: 'Card image cap' %>
           <div class="card-body">
-            <h5 class="card-title text-center">SHOULDERS</h5>
+          <h5 class="card-title text-center">SHOULDERS</h5>
           </div>
         <% end %>
       </div>
     </div>   
-
+          
+    <div class="row ml-1 mr-1">
+      <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
+        <%= link_to workout_path(:id => "core") do %>
+        <%= image_tag 'jonathan-borba-core', class: 'card-img-top', alt: 'Card image cap' %>
+        <div class="card-body">
+        <h5 class="card-title text-center">CORE</h5>
+        </div>
+        <% end %>
+      </div>
+      <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
+        <%= link_to workout_path(:id => "back") do %>
+        <%= image_tag 'edgar-chaparro-back', class: 'card-img-top', alt: 'Card image cap' %>
+        <div class="card-body">
+        <h5 class="card-title text-center">BACK</h5>
+        </div>
+        <% end %>
+      </div>
+    </div> 
+      
     <div class="row ml-1 mr-1">
       <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
         <%= link_to workout_path(:id => "chest") do %>
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <%= image_tag 'rohit-reddy-chest', class: 'card-img-top', alt: 'Card image cap' %>
           <div class="card-body">
             <h5 class="card-title text-center">CHEST</h5>
           </div>
         <% end %>
       </div>
       <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
-        <%= link_to workout_path(:id => "back") do %>
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">BACK</h5>
-          </div>
-        <% end %>
-      </div>
-    </div> 
-
-    <div class="row ml-1 mr-1">
-      <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
-        <%= link_to workout_path(:id => "core") do %>
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">CORE</h5>
-          </div>
-        <% end %>
-      </div>
-      <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
         <%= link_to workout_path(:id => "glutes") do %>
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <%= image_tag 'glutes.png', class: 'card-img-top', alt: 'Card image cap' %>
           <div class="card-body">
             <h5 class="card-title text-center">GLUTES</h5>
           </div>
@@ -69,7 +69,7 @@
     <div class="row ml-1 mr-1">
       <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
         <%= link_to workout_path(:id => "legs") do %>
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <%= image_tag 'foto-garage-ag-legs', class: 'card-img-top', alt: 'Card image cap' %>
           <div class="card-body">
             <h5 class="card-title text-center">LEGS</h5>
           </div>
@@ -77,7 +77,7 @@
       </div>
       <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
         <%= link_to workout_path(:id => "yoga") do %>
-          <img class="card-img-top" src="./assets/images/kike-vega-yoga.png" alt="Card image cap">
+          <%= image_tag 'kike-vega-yoga.png', class: 'card-img-top', alt: 'Card image cap' %>
           <div class="card-body">
             <h5 class="card-title text-center">YOGA</h5>
           </div>
