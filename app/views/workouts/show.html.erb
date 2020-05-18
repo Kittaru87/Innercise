@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Innercise</title>
   </head>
-  <body>  
-  <header>
-    <h1>Innercise</h1>
-  </header>
+  <body>
+  <nav>  
+    <header>
+      <h1>Innercise</h1>
+    </header>
+    <%= link_to root_path do %>
+       <button>Back</button>
+    <% end %>
+  </nav>
+  
   <% if @workouts.empty? %>
     <p> Sorry no videos because quota has been reached </p>
   <% else %>  
