@@ -1,0 +1,19 @@
+language: ruby
+rvm:
+- 2.5.0
+services:
+- postgresql
+before_script:
+- bundle install
+- psql -c 'create database innercise_test;' -U postgres
+- bin/rails db:migrate
+dist: trusty
+script:
+- bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: ...
+  app: innercise
+  on:
+    repo: Kittaru87/innercise

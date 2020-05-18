@@ -9,7 +9,6 @@ ruby '2.6.3'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 # Use pg as the database for Active Record
 gem 'pg'
-
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -33,6 +32,8 @@ gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'google-api-client'
 gem 'httparty'
 
+gem 'bundler'
+gem 'travis'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
