@@ -10,7 +10,7 @@
     <h1>Innercise</h1>
   </header>
     
-  <%= render partial: "arms", locals: { workouts: @workouts }%> 
+  <%= render partial: "workouts", locals: { workouts: @workouts, id: @workout_id } %> 
 
 
   </body>
