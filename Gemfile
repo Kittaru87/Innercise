@@ -32,7 +32,7 @@ gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'google-api-client'
 gem 'httparty'
 
-gem 'bundler', '~> 2.1.4'
+gem 'bundler'
 gem 'travis'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -4,7 +4,6 @@ rvm:
 services:
 - postgresql
 before_script:
-- gem install bundler
 - bundle install
 - psql -c 'create database innercise_test;' -U postgres
 - bin/rails db:migrate
