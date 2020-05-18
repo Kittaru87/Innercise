@@ -4,7 +4,7 @@ require 'rails_helper'
 RSpec.feature 'Pull up list of videos', type: :feature do
   before(:each) do
     visit '/'
-    click_link 'Arms'
+    click_link 'ARMS'
   end
 
   it 'can go back to the home page' do

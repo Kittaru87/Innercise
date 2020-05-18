@@ -8,44 +8,50 @@ RSpec.feature 'Pull up list of videos', type: :feature do
   end
 
   it 'can navigate to the correct workout page' do
-    click_link 'Arms'
+    click_link 'ARMS'
     expect(page).to have_content('arms workouts')
     expect{page}.to_not raise_error
   end
 
   it 'can navigate to the correct workout page' do
-    click_link 'Shoulders'
+    click_link 'SHOULDERS'
     expect(page).to have_content('shoulders workouts')
     expect{page}.to_not raise_error
   end
 
   it 'can navigate to the correct workout page' do
-    click_link 'Back'
+    click_link 'BACK'
     expect(page).to have_content('back workouts')
     expect{page}.to_not raise_error
   end
 
   it 'can navigate to the correct workout page' do
-    click_link 'Chest'
+    click_link 'CHEST'
     expect(page).to have_content('chest workouts')
     expect{page}.to_not raise_error
   end
 
   it 'can navigate to the correct workout page' do
-    click_link 'Glutes'
+    click_link 'GLUTES'
     expect(page).to have_content('glutes workouts')
     expect{page}.to_not raise_error
   end
 
   it 'can navigate to the correct workout page' do
-    click_link 'Legs'
+    click_link 'LEGS'
     expect(page).to have_content('legs workouts')
     expect{page}.to_not raise_error
   end
 
   it 'can navigate to the correct workout page' do
-    click_link 'Core'
+    click_link 'CORE'
     expect(page).to have_content('core workouts')
+    expect{page}.to_not raise_error
+  end
+
+  it 'can navigate to the correct workout page' do
+    click_link 'YOGA'
+    expect(page).to have_content('yoga workouts')
     expect{page}.to_not raise_error
   end
 end
