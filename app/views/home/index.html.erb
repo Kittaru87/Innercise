@@ -9,47 +9,68 @@
 
     <section>
 
-    <%= link_to workout_path(:id => "arms") do %>
-      <button>
-        Arms
-      </button>
-    <% end %>
- 
-    <%= link_to workout_path(:id => "shoulders") do %>
-      <button>
-        Shoulders
-      </button>
-    <% end %>
+    <div class="card" style="width: 18rem;">
+      <%= link_to workout_path(:id => "arms") do %>
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">ARMS</h5>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <%= link_to workout_path(:id => "shoulders") do %>
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">SHOULDERS</h5>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <%= link_to workout_path(:id => "chest") do %>
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">CHEST</h5>
+        </div>
+      <% end %>
+    </div>
     
-    <%= link_to workout_path(:id => "chest") do %>
-      <button>
-        Chest
-      </button>
-    <% end %>
+    <div class="card" style="width: 18rem;">
+      <%= link_to workout_path(:id => "back") do %>
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">BACK</h5>
+        </div>
+      <% end %>
+    </div>
 
-    <%= link_to workout_path(:id => "back") do %>
-      <button>
-        Back
-      </button>
-    <% end %>
+    <div class="card" style="width: 18rem;">
+      <%= link_to workout_path(:id => "core") do %>
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">CORE</h5>
+        </div>
+      <% end %>
+    </div>
 
-    <%= link_to workout_path(:id => "core") do %>
-      <button>
-        Core
-      </button>
-    <% end %>
-   
-    <%= link_to workout_path(:id => "glutes") do %>
-      <button>
-        Glutes
-      </button>
-    <% end %>
+    <div class="card" style="width: 18rem;">
+      <%= link_to workout_path(:id => "glutes") do %>
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">GLUTES</h5>
+        </div>
+      <% end %>
+    </div>
 
-    <%= link_to workout_path(:id => "legs") do %>
-      <button>
-        Legs
-      </button>
-    <% end %>
+    <div class="card" style="width: 18rem;">
+      <%= link_to workout_path(:id => "legs") do %>
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">LEGS</h5>
+        </div>
+      <% end %>
+    </div>
 
     </section>
 
