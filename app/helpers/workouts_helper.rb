@@ -10,8 +10,8 @@ module WorkoutsHelper
 
   BASE_URL = 'https://www.googleapis.com/youtube/v3/search?'
   VIEW = 'part=snippet&'
-  RESULT_NO = 'maxResults=2&'
-  PERM_SEARCH_PARAMS = 'q=workout%2C%20apartment-friendly%2C%20'
+  RESULT_NO = 'maxResults=1&'
+  PERM_SEARCH_PARAMS = 'q=workout%2C%20home%2C%20'
   API_PARTIAL_URL = "key=#{ENV['YT_API_KEY']}"
 
   def api_call(workout)
