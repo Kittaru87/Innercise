@@ -9,7 +9,7 @@ RSpec.feature 'Pull up list of videos', type: :feature do
   end
 
   it 'can go back to the home page' do
-    click_link 'Back'
+    find("a[href='/']").click
     expect(current_path).to eq('/')
   end
 end
