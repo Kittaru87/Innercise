@@ -4,14 +4,14 @@
 </header>
 <section>
   <% workouts.each do |workout| %>
-    <div class="video-div col-lg-8">
+    <div class="video-div col-lg-8" style="margin-bottom: 3em;">
       <h4><%= workout["title"] %></h4>
       </br>
       <p><%= workout["description"] %></p>
       <p>- <%= workout["channel"] %></p>
       </br>
       <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/<%=workout["videoId"]%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="embed-responsive-item" style="padding: 5px;" width="560" height="315" src="https://www.youtube.com/embed/<%=workout["videoId"]%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       </div>
   <% end %>
