@@ -11,7 +11,7 @@
     <% end %>
   
   <% if @workouts.empty? %>
-    <p> Sorry no videos because quota has been reached </p>
+    <p> Sorry we cannot pull up any videos because the search quota has been reached </p>
   <% else %>  
     <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id } %> 
   <% end %>

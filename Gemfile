@@ -33,6 +33,7 @@ gem 'google-api-client'
 gem 'httparty'
 
 gem 'bundler'
+gem 'coveralls', require: false
 gem 'travis'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

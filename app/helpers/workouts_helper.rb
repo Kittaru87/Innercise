@@ -16,7 +16,7 @@ module WorkoutsHelper
 
   def api_call(workout)
     if Rails.env.test?
-      "success"
+      'success'
     else
       workout_params = "#{workout}&"
 
