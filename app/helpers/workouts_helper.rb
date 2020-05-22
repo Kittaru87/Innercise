@@ -14,13 +14,18 @@ module WorkoutsHelper
   PERM_SEARCH_PARAMS = 'q=workout%2C%20apartment-friendly%2C%20'
   API_PARTIAL_URL = "key=#{ENV['YT_API_KEY']}"
 
-  def api_call(workout)
+  def api_call(workout, next_page = "")
     if Rails.env.test?
       'success'
     else
       workout_params = "#{workout}&"
-
-      response = HTTParty.get(BASE_URL + VIEW + RESULT_NO + PERM_SEARCH_PARAMS + workout_params + API_PARTIAL_URL).to_json
+      if next_page == ""
+        next_page_token = next_page
+      else
+        next_page_token = "&pageToken=#{next_page}"
+      end
+      puts next_page_token
+      response = HTTParty.get(BASE_URL + VIEW + RESULT_NO + PERM_SEARCH_PARAMS + workout_params + API_PARTIAL_URL + next_page_token).to_json
 
       response_hash = JSON.parse(response)
     end
