@@ -19,13 +19,10 @@ module WorkoutsHelper
       'success'
     else
       workout_params = "#{workout}&"
-      if next_page == ""
-        next_page_token = ""
-      else
-        next_page_token = "&pageToken=#{next_page}"
-      end
-      puts next_page_token
-      response = HTTParty.get(BASE_URL + VIEW + RESULT_NO + PERM_SEARCH_PARAMS + workout_params + API_PARTIAL_URL + next_page_token).to_json
+      next_page_params = "&pageToken=#{next_page}"
+
+      puts next_page_params
+      response = HTTParty.get(BASE_URL + VIEW + RESULT_NO + PERM_SEARCH_PARAMS + workout_params + API_PARTIAL_URL + next_page_params).to_json
       puts response
       response_hash = JSON.parse(response)
     end
@@ -43,18 +40,21 @@ module WorkoutsHelper
 
   def video_array(response_hash)
     video_array = []
-    response_hash['items'].each do |video|
-      video_array << {
-        'videoId' => video['id']['videoId'],
-        'title' => video['snippet']['title'],
-        'description' => video['snippet']['description'],
-        'channel' => video['snippet']['channelTitle'],
-        'nextPageToken' => response_hash['nextPageToken'],
-        'prevPageToken' => response_hash['prevPageToken']
-      }
+    if response_hash.key? "error"
+      video_array
+    else
+      response_hash['items'].each do |video|
+        video_array << {
+          'videoId' => video['id']['videoId'],
+          'title' => video['snippet']['title'],
+          'description' => video['snippet']['description'],
+          'channel' => video['snippet']['channelTitle'],
+          'nextPageToken' => response_hash['nextPageToken'],
+          'prevPageToken' => response_hash['prevPageToken']
+        }
+      end
+      video_array
     end
-    puts video_array
-    video_array
   end
 
   def mock_video_array
