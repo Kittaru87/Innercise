@@ -43,6 +43,11 @@
    margin-bottom: 1em;
  }
 
+ #responsive-card {
+  width: 18rem; 
+  margin: 1em;
+ }
+
  @media only screen and (max-width : 991px) {
 
   h2 {
@@ -55,11 +60,21 @@
   }
  }
 
+ @media only screen and (max-width : 840px) {
+
+
+
+ }
+
  @media only screen and (max-width : 575px) {
 
   .video-div {
     margin: auto;
     margin-bottom: 1em;
+  }
+
+  #responsive-card {
+    width: auto;
   }
 
   h2 {
