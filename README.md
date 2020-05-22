@@ -1,5 +1,9 @@
 # Innercise
 
+[![Coverage Status](https://coveralls.io/repos/github/Kittaru87/Innercise/badge.svg?branch=master)](https://coveralls.io/github/Kittaru87/Innercise?branch=master)
+
+[![Build Status](https://travis-ci.com/Kittaru87/Innercise.svg?branch=master)](https://travis-ci.com/Kittaru87/Innercise)
+
 Help move your exercise inside.
 
 Access [Innercise](https://innercise.herokuapp.com/) via Heroku.
