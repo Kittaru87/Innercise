@@ -38,17 +38,21 @@ module WorkoutsHelper
 
   def video_array(response_hash)
     video_array = []
-    response_hash['items'].each do |video|
-      video_array << {
-        'videoId' => video['id']['videoId'],
-        'title' => video['snippet']['title'],
-        'description' => video['snippet']['description'],
-        'channel' => video['snippet']['channelTitle']
-      }
+    if response_hash.key? "error"
+      video_array
+    else
+      response_hash['items'].each do |video|
+        video_array << {
+          'videoId' => video['id']['videoId'],
+          'title' => video['snippet']['title'],
+          'description' => video['snippet']['description'],
+          'channel' => video['snippet']['channelTitle'],
+          'nextPageToken' => response_hash['nextPageToken'],
+          'prevPageToken' => response_hash['prevPageToken']
+        }
+      end
+      video_array
     end
-    # video_array << response_hash['prevPageToken']
-    video_array << response_hash['nextPageToken']
-    video_array
   end
 
   def mock_video_array
