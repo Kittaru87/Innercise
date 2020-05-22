@@ -19,7 +19,7 @@ module WorkoutsHelper
       'success'
     else
       workout_params = "#{workout}&"
-
+      
       response = HTTParty.get(BASE_URL + VIEW + RESULT_NO + PERM_SEARCH_PARAMS + workout_params + API_PARTIAL_URL).to_json
 
       response_hash = JSON.parse(response)
@@ -46,6 +46,8 @@ module WorkoutsHelper
         'channel' => video['snippet']['channelTitle']
       }
     end
+    # video_array << response_hash['prevPageToken']
+    video_array << response_hash['nextPageToken']
     video_array
   end
 
