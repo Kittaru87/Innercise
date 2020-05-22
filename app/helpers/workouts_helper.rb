@@ -44,11 +44,10 @@ module WorkoutsHelper
         'title' => video['snippet']['title'],
         'description' => video['snippet']['description'],
         'channel' => video['snippet']['channelTitle'],
+        'nextToken' => response_hash['nextPageToken'],
+        'prevToken' => response_hash['prevPageToken']
       }
     end
-    # video_array << response_hash['prevPageToken'] if response_hash['prevPageToken']
-    video_array[0]['nextPageToken'] = response_hash['nextPageToken']
-    p video_array
     video_array
   end
 
