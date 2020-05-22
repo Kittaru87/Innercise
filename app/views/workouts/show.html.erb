@@ -8,11 +8,10 @@
   <body>
   
   <% if @workouts.empty? %>
-    <p> Sorry we cannot pull up any videos because the search quota has been reached </p>
+    <%= render partial: "redirection" %>
   <% else %>  
     <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id } %> 
   <% end %>
-
 
   </body>
 </html>

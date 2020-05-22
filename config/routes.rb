@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   resources :workouts
 
+  get 'home/about', to: 'home#about'
+
   root 'home#index'
 end
