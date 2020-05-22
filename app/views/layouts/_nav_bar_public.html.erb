@@ -13,7 +13,9 @@
     <div class="collapse navbar-collapse flex-grow-0 ml-auto" id="navbarSupportedContent">
       <ul class="navbar-nav text-right">
         <li class="nav-item active">
-          <a class="nav-link" href="home/about">About</a>
+          <%= link_to home_about_path, :class => "nav-link" do %> 
+            About
+          <% end %>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="#">Sign up</a>
