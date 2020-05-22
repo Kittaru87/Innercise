@@ -20,13 +20,13 @@ module WorkoutsHelper
     else
       workout_params = "#{workout}&"
       if next_page == ""
-        next_page_token = next_page
+        next_page_token = ""
       else
         next_page_token = "&pageToken=#{next_page}"
       end
       puts next_page_token
       response = HTTParty.get(BASE_URL + VIEW + RESULT_NO + PERM_SEARCH_PARAMS + workout_params + API_PARTIAL_URL + next_page_token).to_json
-
+      puts response
       response_hash = JSON.parse(response)
     end
   end
@@ -53,6 +53,7 @@ module WorkoutsHelper
         'prevPageToken' => response_hash['prevPageToken']
       }
     end
+    puts video_array
     video_array
   end
 
