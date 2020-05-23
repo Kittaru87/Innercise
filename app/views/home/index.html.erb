@@ -10,7 +10,7 @@
   <section>
     <div class="row ml-1 mr-1">
       <div class="card col-sm-4 mx-auto" style="width: 18rem; margin: 1em;">
-        <%= link_to workout_path(:id => "arms") do %>
+        <%= link_to workout_path(:id => "arms"), method: :get do %>
           <%= image_tag 'anastase-maragos-arms.png', class: 'card-img-top', alt: 'Card image cap' %>
           <div class="card-body">
             <h5 class="card-title text-center">ARMS</h5>

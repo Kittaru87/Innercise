@@ -10,15 +10,8 @@
   <% if @workouts.empty? %>
     <p> Sorry we cannot pull up any videos because the search quota has been reached </p>
   <% else %>
-    <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id } %>
-  
-  <div>
-  <%= form_with url: workout_path(:id), method: :post do |form| %>
-    <%= hidden_field_tag(:nextPageToken, @workouts[0]['nextPageToken']) %>
-    <%= form.submit "Next" %>
-      <% end %>
-    </div>
-  <% end %>
+    <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id} %>
+  <% end %> 
 
 
   </body>

@@ -32,6 +32,7 @@ module WorkoutsHelper
     if Rails.env.test?
       mock_video_array
     else
+      puts video_array(_response_hash)
       video_array(_response_hash)
     end
   end
