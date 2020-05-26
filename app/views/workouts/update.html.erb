@@ -10,9 +10,9 @@
   <% if @workouts.empty? %>
     <p> Sorry we cannot pull up any videos because the search quota has been reached </p>
   <% else %>
-    <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id} %>
+    <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id, next_page: @next_page } %>
   <% end %> 
 
-
+  This is the update page
   </body>
 </html>

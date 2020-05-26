@@ -14,9 +14,8 @@
       <iframe class="embed-responsive-item" style="padding: 5px;" width="560" height="315" src="https://www.youtube.com/embed/<%=workout["videoId"]%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       </div>
-      <% end %>
-      </section>
-      <div>
-      <%= link_to "Next new", "/workouts/#{id}", method: :post, action: :update, :nextPageToken => @workouts[0]['nextPageToken'] %>
-
+      <%# link_to "Next new", "/workouts/#{id}", method: :put, :nextPageToken => workout['nextPageToken'] %>
+  <% end %>
+</section>
+<div>
 </div>

@@ -23,7 +23,6 @@ module WorkoutsHelper
 
       puts next_page_params
       response = HTTParty.get(BASE_URL + VIEW + RESULT_NO + PERM_SEARCH_PARAMS + workout_params + API_PARTIAL_URL + next_page_params).to_json
-      puts response
       response_hash = JSON.parse(response)
     end
   end
@@ -32,7 +31,6 @@ module WorkoutsHelper
     if Rails.env.test?
       mock_video_array
     else
-      puts video_array(_response_hash)
       video_array(_response_hash)
     end
   end
