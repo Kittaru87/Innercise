@@ -10,7 +10,7 @@
   <% if @workouts.empty? %>
     <p> Sorry we cannot pull up any videos because the search quota has been reached </p>
   <% else %>
-    <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id, next_page: @next_page } %>
+    <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id, next_page: @next_page }, class: "col-lg-9" %>
 
     <div>
       <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
@@ -22,9 +22,9 @@
   <% end %>
   <div>
   <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
-  
-  <%= form.submit "Next", class: "btn btn-default btn-primary" %>
-
+  <div class="col-lg-1 float-right">
+  <%= form.submit "Next", class: "btn btn-default btn-primary center" %>
+  </div>
   <% end %>
 </div>
   </body>
