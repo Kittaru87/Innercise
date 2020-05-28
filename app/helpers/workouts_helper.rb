@@ -59,6 +59,7 @@ module WorkoutsHelper
 
   def mock_video_array
     video_array = [{
+      'bodyId' => 'arms',
       'videoId' => '12345',
       'title' => 'mock video',
       'description' => 'test',

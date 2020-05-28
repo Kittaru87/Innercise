@@ -6,7 +6,7 @@ class WorkoutsController < ApplicationController
   def show
     @workouts = session[:workouts]
     @workout_id = params[:id]
-    if @workouts.empty? || @workout_id != @workouts[0]["bodyId"]
+    if @workouts == nil || @workouts.empty? || @workout_id != @workouts[0]["bodyId"]
       retrieve_videos(@workout_id, "")
     else 
       @workouts
