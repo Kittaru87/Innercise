@@ -21,7 +21,6 @@ module WorkoutsHelper
       workout_params = "#{workout}&"
       next_page_params = "&pageToken=#{next_page}"
 
-      puts next_page_params
       response = HTTParty.get(BASE_URL + VIEW + RESULT_NO + PERM_SEARCH_PARAMS + workout_params + API_PARTIAL_URL + next_page_params).to_json
       response_hash = JSON.parse(response)
     end

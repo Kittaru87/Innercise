@@ -6,17 +6,12 @@ class WorkoutsController < ApplicationController
   def show
     @workouts = session[:workouts]
     @workout_id = params[:id]
-    puts 'start'
-    puts @workouts
-    if !@workouts.empty?
+    if @workouts.empty? || @workout_id != @workouts[0]["bodyId"]
+      retrieve_videos(@workout_id, "")
+    else 
       @previous_page = @workouts[0]["prevPageToken"]
-      puts "previous page"
-      puts @previous_page
       @workouts
-    else
-    retrieve_videos(@workout_id, "")
-  end
-  puts @workouts
+    end
   end
 
   def update
@@ -27,14 +22,6 @@ class WorkoutsController < ApplicationController
     session[:workouts] = @workouts
     redirect_to workout_path(@workout_id)
   end
-
-  # def destroy
-  #   @workouts = session[:workouts]
-  #   @workouts = []
-  #   reset_session
-  #   puts @workouts
-  #   redirect_to :root 
-  # end
 
 private 
 
