@@ -10,7 +10,7 @@ RSpec.feature 'Pull up list of videos', type: :feature do
   it 'can navigate to the arms workout page' do
     click_link 'ARMS'
     expect(page).to have_content('Arms workouts')
-    # expect { page }.to_not raise_error
+    expect { page }.to_not raise_error
   end
 
   it 'can navigate to the shoulders workout page' do

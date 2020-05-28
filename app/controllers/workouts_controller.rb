@@ -1,4 +1,4 @@
-  # frozen_string_literal: true
+# frozen_string_literal: true
 
 class WorkoutsController < ApplicationController
   include WorkoutsHelper
@@ -6,9 +6,9 @@ class WorkoutsController < ApplicationController
   def show
     @workouts = session[:workouts]
     @workout_id = params[:id]
-    if @workouts == nil || @workouts.empty? || @workout_id != @workouts[0]["bodyId"]
-      retrieve_videos(@workout_id, "")
-    else 
+    if @workouts.nil? || @workouts.empty? || @workout_id != @workouts[0]['bodyId']
+      retrieve_videos(@workout_id, '')
+    else
       @workouts
     end
   end
@@ -21,11 +21,10 @@ class WorkoutsController < ApplicationController
     redirect_to workout_path(@workout_id)
   end
 
-private 
+  private
 
   def retrieve_videos(workout_id, next_page)
     videos = api_call(workout_id, next_page)
     @workouts = pull_video_info(workout_id, videos)
   end
-
 end

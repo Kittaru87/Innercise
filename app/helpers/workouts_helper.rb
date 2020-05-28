@@ -14,7 +14,7 @@ module WorkoutsHelper
   PERM_SEARCH_PARAMS = 'q=workout%2C%20apartment-friendly%2C%20'
   API_PARTIAL_URL = "key=#{ENV['YT_API_KEY']}"
 
-  def api_call(workout, next_page = "")
+  def api_call(workout, next_page = '')
     if Rails.env.test?
       'success'
     else
@@ -39,7 +39,7 @@ module WorkoutsHelper
 
   def video_array(workout_id, response_hash)
     video_array = []
-    if response_hash.key? "error"
+    if response_hash.key? 'error'
       video_array
     else
       response_hash['items'].each do |video|

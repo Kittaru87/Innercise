@@ -28,9 +28,9 @@ gem 'figaro'
 # To store more data in session than rails usually allows - this will store it in Active Record
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
-gem "activesupport", ">= 6.0.3.1"
-gem "actionpack", ">= 6.0.3.1"
-gem "activestorage", ">= 6.0.3.1"
+gem 'actionpack', '>= 6.0.3.1'
+gem 'activestorage', '>= 6.0.3.1'
+gem 'activesupport', '>= 6.0.3.1'
 
 # API calls
 gem 'google-api-client'
