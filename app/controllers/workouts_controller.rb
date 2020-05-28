@@ -9,14 +9,12 @@ class WorkoutsController < ApplicationController
     if @workouts.empty? || @workout_id != @workouts[0]["bodyId"]
       retrieve_videos(@workout_id, "")
     else 
-      @previous_page = @workouts[0]["prevPageToken"]
       @workouts
     end
   end
 
   def update
     @next_page = params[:nextPageToken]
-    @previous_page = params[:prevPageToken]
     @workout_id = params[:id]
     retrieve_videos(@workout_id, @next_page)
     session[:workouts] = @workouts

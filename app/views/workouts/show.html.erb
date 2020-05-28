@@ -11,11 +11,10 @@
   <% if @workouts.empty? %>
   <p> Sorry we cannot pull up any videos because the search quota has been reached </p>
   <% else %>
-    <div>
+    <div class="col-lg-1 float-left">
       <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
-        <div class="col-lg-1 float-left">
+        <%= hidden_field_tag(:nextPageToken, @workouts[0]['prevPageToken']) %>
           <%= form.submit "Previous", class: "btn btn-default btn-primary center" %>
-        </div>
       <% end %>
     </div>
 
@@ -24,7 +23,6 @@
     <div class="col-lg-1 float-right">
       <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
         <%= hidden_field_tag(:nextPageToken, @workouts[0]['nextPageToken']) %>
-        <%= hidden_field_tag(:prevPageToken, @workouts[0]['prevPageToken']) %>
         <%= form.submit "Next", class: "btn btn-default btn-primary center" %>
       <% end %>
     </div>
