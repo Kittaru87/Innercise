@@ -5,9 +5,10 @@ Rails.application.routes.draw do
 
   resources :workouts
 
-
-
   get 'home/terms_of_service'
-  
+
+  get 'home/about'
+
+
   root 'home#index'
 end

@@ -14,13 +14,18 @@
  *= require_self
  */
 
- @import "bootstrap/scss/bootstrap";
+ @import "../node_modules/bootstrap/scss/bootstrap";
 
  body {
   font-family: 'Comfortaa', medium;
  }
 
  h2 {
+  font-family: 'Comfortaa', bold;
+  margin-block-end: 2em;
+ }
+
+ h3 {
   font-family: 'Comfortaa', bold;
   margin-block-end: 2em;
  }
@@ -52,10 +57,38 @@
    margin-bottom: 1em;
  }
 
+ #responsive-card {
+  width: 18rem; 
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+ }
+
+ #responsive-column {
+  display: inline-block;
+ }
+
+ #index-cards {
+  display: inline-block;
+ }
+
+ #rhs-info {
+  width: 100%; 
+  margin: 1em;
+  margin-left: auto;
+  padding: 15px;
+ }
+
  @media only screen and (max-width : 991px) {
 
   h2 {
     margin-block-end: 1em; 
+  }
+
+  #responsive-row {
+    width: auto;
   }
 
   .video-div {
@@ -69,6 +102,14 @@
   .video-div {
     margin: auto;
     margin-bottom: 1em;
+  }
+
+  #responsive-row {
+    width: auto;
+  }
+
+  #responsive-card {
+    width: auto;
   }
 
   h2 {
