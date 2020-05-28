@@ -10,23 +10,23 @@
   
   <% if @workouts.empty? %>
 
-  <p> Sorry we cannot pull up any videos because the search quota has been reached </p>
+   <%= render partial: "redirection" %>
   <% else %>
-    <div class="col-lg-1 float-left">
+    <div id="responsive-column" class="col-lg-1 float-left">
       <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
         <%= hidden_field_tag(:nextPageToken, @workouts[0]['prevPageToken']) %>
-          <%= form.submit "Previous", class: "btn btn-default btn-primary center" %>
+        <%= form.submit "Previous", class: "btn btn-default btn-primary center" %>
       <% end %>
     </div>
-
-    <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id, next_page: @next_page }, class: "col-lg-10" %>
-
-    <div class="col-lg-1 float-right">
+    <div id="responsive-column" class="col-lg-1 float-right">
       <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
         <%= hidden_field_tag(:nextPageToken, @workouts[0]['nextPageToken']) %>
         <%= form.submit "Next", class: "btn btn-default btn-primary center" %>
       <% end %>
     </div>
+
+    <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id, next_page: @next_page }, class: "col-lg-10" %>
+
   <% end %>
 
   </body>
