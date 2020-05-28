@@ -27,23 +27,24 @@ module WorkoutsHelper
     end
   end
 
-  def pull_video_info(_response_hash)
+  def pull_video_info(workout_id, _response_hash)
     if Rails.env.test?
       mock_video_array
     else
-      video_array(_response_hash)
+      video_array(workout_id, _response_hash)
     end
   end
 
   private
 
-  def video_array(response_hash)
+  def video_array(workout_id, response_hash)
     video_array = []
     if response_hash.key? "error"
       video_array
     else
       response_hash['items'].each do |video|
         video_array << {
+          'bodyId' => workout_id,
           'videoId' => video['id']['videoId'],
           'title' => video['snippet']['title'],
           'description' => video['snippet']['description'],

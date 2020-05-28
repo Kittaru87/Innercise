@@ -7,34 +7,28 @@
   </head>
   <body>
 
-  <div>
-    <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
-      <div class="col-lg-1 float-left">
-        <%= form.submit "Previous", class: "btn btn-default btn-primary center" %>
-      </div>
-    <% end %>
-  </div>
-
+  
   <% if @workouts.empty? %>
-    <p> Sorry we cannot pull up any videos because the search quota has been reached </p>
+  <p> Sorry we cannot pull up any videos because the search quota has been reached </p>
   <% else %>
+    <div>
+      <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
+        <div class="col-lg-1 float-left">
+          <%= form.submit "Previous", class: "btn btn-default btn-primary center" %>
+        </div>
+      <% end %>
+    </div>
+
     <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id, next_page: @next_page }, class: "col-lg-10" %>
 
-    <div>
+    <div class="col-lg-1 float-right">
       <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
         <%= hidden_field_tag(:nextPageToken, @workouts[0]['nextPageToken']) %>
         <%= hidden_field_tag(:prevPageToken, @workouts[0]['prevPageToken']) %>
-        <%= form.submit "Next", class: "btn btn-default btn-primary" %>
+        <%= form.submit "Next", class: "btn btn-default btn-primary center" %>
       <% end %>
     </div>
   <% end %>
 
-  <div>
-    <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
-      <div class="col-lg-1 float-right">
-        <%= form.submit "Next", class: "btn btn-default btn-primary center" %>
-      </div>
-    <% end %>
-  </div>
   </body>
 </html>
