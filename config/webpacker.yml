@@ -97,5 +97,5 @@ production:
 
 build:  
   <<: *default
-    compile: true
+  compile: true
 
