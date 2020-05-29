@@ -54,7 +54,6 @@ module WorkoutsHelper
         }
 
         update_workout_db(video_array)
-
       end
       video_array
     end
@@ -65,9 +64,18 @@ module WorkoutsHelper
     Workout.create(video_array[0].first(5).to_h) unless workout
   end
 
-  def pull_random_db_workout(workout_id)
-    workout = Workout.order("RANDOM()").limit(1)
-  end  
+  def pull_random_db_workout(_workout_id)
+    workout = Workout.order('RANDOM()').limit(1)
+    random_db_workout = {
+      'bodyId' => workout[0].bodyId,
+      'videoId' => workout[0].videoId,
+      'title' => workout[0].title,
+      'description' => workout[0].description,
+      'channel' => workout[0].channel,
+      'nextPageToken' => workout[0].nextPageToken,
+      'prevPageToken' => workout[0].prevPageToken
+    }
+  end
 
   def mock_video_array
     video_array = [{

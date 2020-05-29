@@ -1,26 +1,26 @@
-# <div class="ml-3 mt-4 text-center">
-#   <p> Sorry we cannot pull up any new videos at this time because the daily search quota has been reached. </p>
-#   <p> Why not check out our most popular videos!</p>
-#   <%= render partial: "home/most_popular" %> 
-# </div>
+# # <div class="ml-3 mt-4 text-center">
+# #   <p> Sorry we cannot pull up any new videos at this time because the daily search quota has been reached. </p>
+# #   <p> Why not check out our most popular videos!</p>
+# #   <%= render partial: "home/most_popular" %> 
+# # </div>
 
-<header class="md-4" style="margin: 2em;">
-  <h2 class="text-center"><%= id.capitalize %> workouts</h2>
-</header>
-<section>
-I'm a redirect
-  <% workouts.each do |workout| %>
-    <div class="video-div col-lg-8 text-center" style="margin-bottom: 3em;">
-      <h4><%= workout["title"] %></h4>
-      </br>
-      <p><%= workout["description"] %></p>
-      <p>- <%= workout["channel"] %></p>
-      </br>
-      <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" style="padding: 5px;" width="560" height="315" src="https://www.youtube.com/embed/<%=workout["videoId"]%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      </div>
-  <% end %>
-</section>
-<div>
-</div>
+# <header class="md-4" style="margin: 2em;">
+#   <h2 class="text-center"><%= id.capitalize %> workouts</h2>
+# </header>
+# <section>
+# I'm a redirect
+#   <% workouts.each do |workout| %>
+#     <div class="video-div col-lg-8 text-center" style="margin-bottom: 3em;">
+#       <h4><%= workout["title"] %></h4>
+#       </br>
+#       <p><%= workout["description"] %></p>
+#       <p>- <%= workout["channel"] %></p>
+#       </br>
+#       <div class="embed-responsive embed-responsive-16by9">
+#       <iframe class="embed-responsive-item" style="padding: 5px;" width="560" height="315" src="https://www.youtube.com/embed/<%=workout["videoId"]%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#       </div>
+#       </div>
+#   <% end %>
+# </section>
+# <div>
+# </div>
