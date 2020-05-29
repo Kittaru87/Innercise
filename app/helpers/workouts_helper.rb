@@ -52,9 +52,17 @@ module WorkoutsHelper
           'nextPageToken' => response_hash['nextPageToken'],
           'prevPageToken' => response_hash['prevPageToken']
         }
+
+        update_workout_db(video_array)
+
       end
       video_array
     end
+  end
+
+  def update_workout_db(video_array)
+    workout = Workout.find_by(videoId: video_array[0]['videoId'])
+    Workout.create(video_array[0].first(5).to_h) unless workout
   end
 
   def mock_video_array
