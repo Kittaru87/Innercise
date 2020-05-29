@@ -7,11 +7,6 @@
   </head>
   <body>
 
-  
-  <% if @workouts.empty? %>
-
-   <%= render partial: "redirection" %>
-  <% else %>
   <div class="container">
     <div class="row justify-content-between">
       <div class="mt-4">
@@ -28,9 +23,8 @@
       </div>
     </div>
   </div>
-    <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id, next_page: @next_page }, class: "col-lg-10" %>
 
-  <% end %>
+    <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id, next_page: @next_page }, class: "col-lg-10" %>
 
   </body>
 </html>

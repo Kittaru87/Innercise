@@ -3,15 +3,16 @@
 require 'rails_helper'
 
 RSpec.describe Workout, type: :model do
-  subject(:workout) { described_class.new(
+  subject(:workout) do
+    described_class.new(
       id: 1,
-      bodyId: "arms",
+      bodyId: 'arms',
       videoId: '12345',
       title: 'fake workout',
       description: 'fake description',
       channel: 'Fake channel'
     )
-  }
+  end
 
   it 'is not valid without a bodyId' do
     workout.bodyId = nil
