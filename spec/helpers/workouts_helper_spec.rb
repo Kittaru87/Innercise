@@ -14,7 +14,7 @@ describe WorkoutsHelper do
     it 'should return a nested array of video information' do
       workout = 'arms'
       response = helper.api_call(workout)
-      expect(pull_video_info(response)).to eq [{ 'channel' => 'mock channel', 'description' => 'test', 'title' => 'mock video', 'videoId' => '12345' }]
+      expect(pull_video_info(workout, response)).to eq [{ 'bodyId' => 'arms', 'channel' => 'mock channel', 'description' => 'test', 'title' => 'mock video', 'videoId' => '12345' }]
     end
   end
 end

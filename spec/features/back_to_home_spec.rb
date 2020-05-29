@@ -2,13 +2,13 @@
 
 require 'rails_helper'
 
-RSpec.feature 'Pull up list of videos', type: :feature do
+RSpec.feature 'Navigate back to the home page', type: :feature do
   before(:each) do
     visit '/'
     click_link 'ARMS'
   end
 
-  it 'can go back to the home page' do
+  it 'can click the logo' do
     find("a[href='/']").click
     expect(current_path).to eq('/')
   end
