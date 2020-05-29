@@ -55,6 +55,14 @@
   display: inline-block;
  }
 
+ #responsive-btn-left {
+  display: inline-block;
+}
+
+#responsive-btn-right {
+  display: inline-block;
+}
+
  #index-cards {
   display: inline-block;
  }
@@ -74,6 +82,14 @@
 
   #responsive-row {
     width: auto;
+  }
+
+  #responsive-btn-left {
+    float: left;
+  }
+
+  #responsive-btn-left {
+    float: right;
   }
 
   .video-div {

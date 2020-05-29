@@ -12,19 +12,22 @@
 
    <%= render partial: "redirection" %>
   <% else %>
-    <div id="responsive-column" class="col-lg-1 float-left">
-      <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
-        <%= hidden_field_tag(:nextPageToken, @workouts[0]['prevPageToken']) %>
-        <%= form.submit "Previous", class: "btn btn-default btn-primary center" %>
-      <% end %>
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="mt-4">
+        <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
+          <%= hidden_field_tag(:nextPageToken, @workouts[0]['prevPageToken']) %>
+          <%= form.submit "Previous", class: "btn btn-default btn-primary ml-3" %>
+        <% end %>
+      </div>
+      <div class="mt-4">
+        <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
+          <%= hidden_field_tag(:nextPageToken, @workouts[0]['nextPageToken']) %>
+          <%= form.submit "Next", class: "btn btn-default btn-primary mr-3" %>
+        <% end %>
+      </div>
     </div>
-    <div id="responsive-column" class="col-lg-1 float-right">
-      <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
-        <%= hidden_field_tag(:nextPageToken, @workouts[0]['nextPageToken']) %>
-        <%= form.submit "Next", class: "btn btn-default btn-primary center" %>
-      <% end %>
-    </div>
-
+  </div>
     <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id, next_page: @next_page }, class: "col-lg-10" %>
 
   <% end %>
