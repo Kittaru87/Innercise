@@ -65,7 +65,7 @@ module WorkoutsHelper
   end
 
   def pull_random_db_workout(_workout_id)
-    workout = Workout.order('RANDOM()').limit(1)
+    workout = Workout.where(bodyId: _workout_id).order('RANDOM()').limit(1)
     random_db_workout = {
       'bodyId' => workout[0].bodyId,
       'videoId' => workout[0].videoId,

@@ -24,15 +24,7 @@
     </div>
   </div>
 
-  <% if @workouts.empty? %>
-
-    <%= render partial: "redirection" %>
-
-  <% else %>
-
     <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id, next_page: @next_page }, class: "col-lg-10" %>
-
-  <% end %>
 
   </body>
 </html>
