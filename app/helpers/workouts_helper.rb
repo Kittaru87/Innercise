@@ -40,7 +40,7 @@ module WorkoutsHelper
   def video_array(workout_id, response_hash)
     video_array = []
     if response_hash.key? 'error'
-      video_array
+      video_array << pull_random_db_workout(workout_id)
     else
       response_hash['items'].each do |video|
         video_array << {
@@ -64,6 +64,10 @@ module WorkoutsHelper
     workout = Workout.find_by(videoId: video_array[0]['videoId'])
     Workout.create(video_array[0].first(5).to_h) unless workout
   end
+
+  def pull_random_db_workout(workout_id)
+    workout = Workout.order("RANDOM()").limit(1)
+  end  
 
   def mock_video_array
     video_array = [{
