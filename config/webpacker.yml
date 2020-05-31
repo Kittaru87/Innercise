@@ -78,6 +78,8 @@ development:
 
 test:
   <<: *default
+  steps: 
+  run: NODE_ENV=test bundle exec rails webpacker:compile
   compile: true
 
   # Compile test packs to a separate directory
