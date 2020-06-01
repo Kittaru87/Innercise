@@ -78,6 +78,7 @@ development:
 
 test:
   <<: *default
+  
   compile: true
 
   # Compile test packs to a separate directory
