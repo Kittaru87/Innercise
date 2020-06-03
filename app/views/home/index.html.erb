@@ -97,6 +97,12 @@
       </div>
     
       <div id="responsive-column" class="col-lg-3 float-right">
+        
+        <% if user_signed_in? %>
+          <div id="rhs-info">
+            <%= render partial: "profile_overview" %>
+          </div>
+        <% end %>
 
         <div id="rhs-info">
           <%= render partial: "most_popular" %> 
