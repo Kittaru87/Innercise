@@ -61,7 +61,7 @@ module WorkoutsHelper
 
   def update_workout_db(video_array)
     workout = Workout.find_by(videoId: video_array[0]['videoId'])
-    Workout.create(video_array[0].first(5).to_h) unless workout
+    Workout.create(video_array[0].first(7).to_h) unless workout
   end
 
   def pull_random_db_workout(_workout_id)

@@ -6,6 +6,10 @@ Coveralls.wear!('rails')
 require 'simplecov'
 require 'simplecov-console'
 
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+                                                                 SimpleCov::Formatter::Console,
+                                                                 SimpleCov::Formatter::HTMLFormatter
+                                                               ])
 SimpleCov.start 'rails' do
   add_filter '/bin/'
   add_filter '/db/'
@@ -15,10 +19,6 @@ SimpleCov.start 'rails' do
   add_filter '/app/channels'
   add_filter '/app/helpers'
 end
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
-                                                                 SimpleCov::Formatter::Console,
-                                                                 SimpleCov::Formatter::HTMLFormatter
-                                                               ])
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
