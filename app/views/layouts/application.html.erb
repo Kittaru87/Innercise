@@ -15,8 +15,15 @@
           <%= render "layouts/nav_bar_public" %> 
         <% end %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+        <% if notice %>
+          <p class="notice text-right mr-4 mt-2"><%= notice %></p>
+        <% elsif alert %>
+          <p class="alert text-right mr-4 mt-2"><%= alert %></p>
+        <% else %>
+          <div class="mt-4"></div>
+        <% end %>
+     
   <body>
     <%= yield %>
   </body>

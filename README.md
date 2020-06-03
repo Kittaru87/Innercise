@@ -10,6 +10,8 @@ Access [Innercise](https://innercise.herokuapp.com/) via Heroku.
 
 **Tech used**: Ruby on Rails, Rspec, Capybara, Rubocop, Coveralls, Travis CI, Heroku
 
+foreman start -f Procfile.dev
+
 ## Planning ##
 
 [Trello board](https://trello.com/b/17SYVyiB/home-gym-app)
