@@ -25,6 +25,9 @@ install:
 script:
 - bundle exec rails webpacker:compile
 - bundle exec rspec
+- sbt clean coverage test coverageReport && sbt coverageAggregate
+after success:
+- sbt coveralls
 branches:
   only:
   - master
