@@ -33,7 +33,7 @@ deploy:
   skip_cleanup: true
   app: innercise
   on:
-    repo: Kittaru87/innercise
+    repo: Kittaru87/Innercise
   run:
   - bundle exec rails db:migrate
   - bundle exec rails db:seed
