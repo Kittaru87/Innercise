@@ -33,5 +33,11 @@ User journey:
 - Create video database
 - Pull relevant video data from database once API quota has been reached 
 
+**3rd iteration - add user authentication and profile page**
+
+- install Devise
+- Style Devise standard views
+- Add profile page
+
 
 
