@@ -18,6 +18,4 @@ RSpec.feature 'pulls up next video', type: :feature do
     click_button 'Previous'
     expect { page }.to_not raise_error
   end
-
-
 end
