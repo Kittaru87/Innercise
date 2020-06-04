@@ -5,7 +5,7 @@ Coveralls.wear!
 
 require 'simplecov'
 require 'simplecov-console'
-require 'helpers/web_helpers'
+require 'features/web_helpers'
 
 SimpleCov.start 'rails' do
   add_filter '/bin/'
