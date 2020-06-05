@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-# RSpec.describe RegistrationsController, type: :controller do
+RSpec.describe RegistrationsController, type: :controller do
 #   before(:each) do
 #     @user = User.create { :user }
 #     controller.stub(:authenticate_user!).and_return(true)
@@ -18,4 +18,4 @@ require 'rails_helper'
 #       expect(response).to have_http_status(:success)
 #     end
 #   end
-# end
+end
