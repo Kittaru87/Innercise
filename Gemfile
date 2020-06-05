@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 # Securely configure Rails applications
 gem 'figaro'
+# Authentication
+gem 'devise'
 # To store more data in session than rails usually allows - this will store it in Active Record
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
