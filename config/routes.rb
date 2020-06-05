@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :workouts
 
-  get 'home/profile'
+  get 'home/profile/:username' => "home#profile", as: :profile
   get 'home/terms_of_service'
   get 'home/about'
   root 'home#index'
