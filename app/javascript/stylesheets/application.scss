@@ -28,6 +28,15 @@
    color: #FB8F67;
  }
 
+ .flex-display {
+  display: flex;
+ }
+
+ .profile-box-style {
+  background-color: #156064 !important; 
+  color: white !important;
+ }
+
  .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: #156064 !important;
   border: #156064 !important;
@@ -119,6 +128,14 @@
     width: auto;
   }
 
+  .flex-display {
+    display: block;
+    width: auto;
+   }
+
+  .profile-box-style {
+    margin-left: 0% !important;
+  }
 
   h2 {
     margin-block-end: 1em; 
