@@ -2,7 +2,8 @@
 <header class="md-4" style="margin: 2em;">
   <h2 class="text-center"><%= id.capitalize %> workouts</h2>
 </header>
-<section>
+<section class="row">
+
   <% workouts.each do |workout| %>
     <div class="video-div col-lg-8 text-center" style="margin-bottom: 3em;">
       <h4><%= workout["title"] %></h4>
@@ -11,10 +12,22 @@
       <p>- <%= workout["channel"] %></p>
       </br>
       <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" style="padding: 5px;" width="560" height="315" src="https://www.youtube.com/embed/<%=workout["videoId"]%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" style="padding: 5px;" width="560" height="315" src="https://www.youtube.com/embed/<%=workout["videoId"]%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      </div>
+
+    </div>
   <% end %>
+  
+  <div class="col-lg-3 float-right text-center">
+  <% if user_signed_in? %>
+  <div class="rhs-info">
+  <button class="btn btn-video my-3"> like </button>
+  <br />
+  <button class="btn btn-video my-3"> Add to profile </button>
+  <br />
+  <button class="btn btn-video my-3"> I have completed this workout today </button>
+  </div>
+  <% end %>
+  </div>
+
 </section>
-<div>
-</div>

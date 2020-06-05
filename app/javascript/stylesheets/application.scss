@@ -46,6 +46,16 @@
   background-color: #FB8F67 !important;
 }
 
+.btn-video {
+  border: solid 2px #156064 !important;
+}
+
+.btn-video:hover, .btn-video:active {
+  border: solid 2px #FB8F67 !important;
+  background-color: #FB8F67 !important;
+  color: white;
+}
+
 .video-div {
   margin: 3em;
   margin-bottom: 1em;
