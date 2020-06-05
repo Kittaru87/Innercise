@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'home/index'
 
   resources :workouts
-  
+
   get 'home/profile'
   get 'home/terms_of_service'
   get 'home/about'
