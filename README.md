@@ -10,7 +10,7 @@ Access [Innercise](https://innercise.herokuapp.com/) via Heroku.
 
 **Tech used**: Ruby on Rails, Rspec, Capybara, Rubocop, Coveralls, Travis CI, Heroku
 
-foreman start -f Profile.dev
+foreman start -f Procfile.dev
 
 ## Setup
 ```
@@ -21,8 +21,6 @@ $ yarn install
 $ bundle exec figaro install
 ```
 You will then have to add a `YT_API_KEY` to the config/application.yml file with a valid Google API key.
-
-
 
 ## Planning ##
 
@@ -44,6 +42,12 @@ User journey:
 - Improve usability by allowing users to scroll through videos
 - Create video database
 - Pull relevant video data from database once API quota has been reached 
+
+**3rd iteration - add user authentication and profile page**
+
+- install Devise
+- Style Devise standard views
+- Add profile page
 
 
 
