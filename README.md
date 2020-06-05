@@ -12,6 +12,16 @@ Access [Innercise](https://innercise.herokuapp.com/) via Heroku.
 
 foreman start -f Procfile.dev
 
+## Setup
+```
+$ git clone https://github.com/kittaru87/innercise.git
+$ cd innercise
+$ bundle install
+$ yarn install
+$ bundle exec figaro install
+```
+You will then have to add a `YT_API_KEY` to the config/application.yml file with a valid Google API key.
+
 ## Planning ##
 
 [Trello board](https://trello.com/b/17SYVyiB/home-gym-app)
@@ -21,7 +31,7 @@ foreman start -f Procfile.dev
 User journey:
 
 - Navigate to home page
-- Press link for what type of workout you want
+- Click the type of workout you want
 - Navigate to selected page
 - A selection of youtube videos to display either as a scroll down list or a horizontal scroll list that you navigate one at a time
 - Idea to have the API call in the workouts helper to keep the workouts controller skinny - the show method pushes the id of the button into the api call
