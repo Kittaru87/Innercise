@@ -10,7 +10,7 @@
     <section>
       <div id="index-cards" class="col-lg-9">
 
-        <div id="responsive-row" class="row ml-1 mr-1">
+        <div class="responsive-row row ml-1 mr-1">
           <div id="responsive-card" class="card col-sm-5 col-lg-5">
             <%= link_to workout_path(:id => "arms") do %>
               <%= image_tag 'anastase-maragos-arms.png', class: 'card-img-top', alt: 'Card image cap' %>
@@ -31,7 +31,7 @@
           </div>   
         </div>
               
-        <div id="responsive-row" class="row ml-1 mr-1">
+        <div class="responsive-row row ml-1 mr-1">
           <div id="responsive-card" class="card col-sm-5 col-lg-5">
             <%= link_to workout_path(:id => "core") do %>
               <%= image_tag 'jonathan-borba-core.png', class: 'card-img-top', alt: 'Card image cap' %>
@@ -52,7 +52,7 @@
           </div>
         </div> 
           
-        <div id="responsive-row" class="row ml-1 mr-1">
+        <div class="responsive-row row ml-1 mr-1">
           <div id="responsive-card" class="card col-sm-5 col-lg-5">
             <%= link_to workout_path(:id => "chest") do %>
               <%= image_tag 'rohit-reddy-chest.png', class: 'card-img-top', alt: 'Card image cap' %>
@@ -73,7 +73,7 @@
           </div>
         </div>
 
-        <div id="responsive-row" class="row ml-1 mr-1">
+        <div class="responsive-row row ml-1 mr-1">
           <div id="responsive-card" class="card col-sm-5 col-lg-5">
             <%= link_to workout_path(:id => "legs") do %>
               <%= image_tag 'foto-garage-ag-legs.png', class: 'card-img-top', alt: 'Card image cap' %>
@@ -96,19 +96,21 @@
 
       </div>
     
-      <div id="responsive-column" class="col-lg-3 float-right text-center">
+      <div class="responsive-column col-lg-3 float-right text-center">
         
+      <div>
         <% if user_signed_in? %>
-          <div id="rhs-info">
+          <div class="rhs-info">
             <%= render partial: "profile_overview" %>
           </div>
         <% end %>
+      </div>
 
-        <div id="rhs-info">
+        <div class="rhs-info">
           <%= render partial: "most_popular" %> 
         </div>
 
-        <div id="rhs-info">
+        <div class="rhs-info">
           <%= render partial: "recommended" %> 
         </div>
 
@@ -117,9 +119,7 @@
 
   <footer class="footer mt-auto py-3">
     <div class="ml-3 mt-5">     
-      <%= link_to home_terms_of_service_path do %> 
-        Terms of service
-      <% end %>
+      <%= link_to "Terms of service", home_terms_of_service_path %> 
     </div>
   </footer>
     
