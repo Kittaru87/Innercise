@@ -20,17 +20,21 @@
   <% end %>
 
   <div class="col-lg-3 float-right text-center">
-  <% if user_signed_in? %>
-  <div class="rhs-info">
-    <%= @likeworkout = Workout.find_by(videoId: workouts[0]["videoId"])%>
-    <%= button_to 'Like', workout_likes_path(workout_id: @likeworkout.id), method: :post, class: "btn btn-video my-3" %>
+    <% if user_signed_in? %>
+      <div class="rhs-info">
+      <% workout = Workout.find_by(videoId: workouts[0]["videoId"])%>
+      <%= link_to workout_likes_path(workout_id: workout.id), method: :post do %>
+        <button class="btn btn-video my-3">
+          Like
+        </button>
+      <% end %> 
 
-  <br />
-  <button class="btn btn-video my-3"> Add to profile </button>
-  <br />
-  <button class="btn btn-video my-3"> I have completed this workout today </button>
-  </div>
-  <% end %>
+      <br />
+      <button class="btn btn-video my-3"> Add to profile </button>
+      <br />
+      <button class="btn btn-video my-3"> I have completed this workout today </button>
+      </div>
+    <% end %>
   </div>
 
 </section>
