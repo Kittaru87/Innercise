@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   devise_for :users
   get 'home/index'
 
-  resources :workouts
+  resources :workouts do
+    resources :likes
+  end
 
   get '/profile/:username' => "home#profile", as: :profile
   get '/terms_of_service' => "home#terms_of_service"

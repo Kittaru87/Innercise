@@ -10,13 +10,13 @@
   <div class="container">
     <div class="row justify-content-between">
       <div class="mt-4">
-        <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
+        <%= form_with url: workout_path(@body_id), method: :put do |form| %>
           <%= hidden_field_tag(:nextPageToken, @workouts[0]['prevPageToken']) %>
           <%= form.submit "Previous", class: "btn btn-default btn-primary ml-3" %>
         <% end %>
       </div>
       <div class="mt-4">
-        <%= form_with url: workout_path(@workout_id), method: :put do |form| %>
+        <%= form_with url: workout_path(@body_id), method: :put do |form| %>
           <%= hidden_field_tag(:nextPageToken, @workouts[0]['nextPageToken']) %>
           <%= form.submit "Next", class: "btn btn-default btn-primary mr-3" %>
         <% end %>
@@ -24,7 +24,7 @@
     </div>
   </div>
 
-    <%= render partial: "videos", locals: { workouts: @workouts, id: @workout_id, next_page: @next_page }, class: "col-lg-10" %>
+    <%= render partial: "videos", locals: { workouts: @workouts, id: @body_id, next_page: @next_page }, class: "col-lg-10" %>
 
   </body>
 </html>
