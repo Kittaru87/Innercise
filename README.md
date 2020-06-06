@@ -49,5 +49,11 @@ User journey:
 - Style Devise standard views
 - Add profile page
 
+**4th iteration - add ability to like workouts and display on profile page**
+
+- create likes join table
+- add button functionality to video page
+- show liked videos on profile page
+- show top liked videos on index page
 
 

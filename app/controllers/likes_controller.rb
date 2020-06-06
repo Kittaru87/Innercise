@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class LikesController < ApplicationController
   before_action :find_workout
-  
+
   def create
     if already_liked?
       flash[:notice] = "You can't like a workout more than once"
@@ -19,5 +21,4 @@ class LikesController < ApplicationController
   def already_liked?
     Like.where(user_id: current_user.id, workout_id: params[:workout_id]).exists?
   end
-
 end

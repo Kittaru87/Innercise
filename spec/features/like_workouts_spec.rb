@@ -27,5 +27,4 @@ RSpec.feature 'like workouts', type: :feature do
 
   #   expect(page).to have_content('0 Likes')
   # end
-
 end
