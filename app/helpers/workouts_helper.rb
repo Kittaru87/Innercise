@@ -27,24 +27,24 @@ module WorkoutsHelper
     end
   end
 
-  def pull_video_info(workout_id, _response_hash)
+  def pull_video_info(body_id, _response_hash)
     if Rails.env.test?
       mock_video_array
     else
-      video_array(workout_id, _response_hash)
+      video_array(body_id, _response_hash)
     end
   end
 
   private
 
-  def video_array(workout_id, response_hash)
+  def video_array(body_id, response_hash)
     video_array = []
     if response_hash.key? 'error'
-      video_array << pull_random_db_workout(workout_id)
+      video_array << pull_random_db_workout(body_id)
     else
       response_hash['items'].each do |video|
         video_array << {
-          'bodyId' => workout_id,
+          'bodyId' => body_id,
           'videoId' => video['id']['videoId'],
           'title' => video['snippet']['title'],
           'description' => video['snippet']['description'],
@@ -64,8 +64,8 @@ module WorkoutsHelper
     Workout.create(video_array[0].first(7).to_h) unless workout
   end
 
-  def pull_random_db_workout(_workout_id)
-    workout = Workout.where(bodyId: _workout_id).order('RANDOM()').limit(1)
+  def pull_random_db_workout(_body_id)
+    workout = Workout.where(bodyId: _body_id).order('RANDOM()').limit(1)
     random_db_workout = {
       'bodyId' => workout[0].bodyId,
       'videoId' => workout[0].videoId,
