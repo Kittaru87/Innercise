@@ -15,18 +15,14 @@ module AccountsHelper
 
 
   def liked_video_array(body_id, videoId)
-    puts body_id
-    puts videoId
     video_array = []
     video_array << pull_liked_workout(body_id, videoId)
-    puts video_array
     video_array
   end
   
 
   def pull_liked_workout(_body_id, _videoId)
     workout = Workout.where(bodyId: _body_id, videoId: _videoId)
-    puts workout
     liked_workout = {
       'bodyId' => workout[0].bodyId,
       'videoId' => workout[0].videoId,

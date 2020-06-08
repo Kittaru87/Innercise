@@ -7,19 +7,11 @@ class AccountsController < ApplicationController
     @all_workouts = Like.where(user_id: current_user.id) 
   end
 
-
   def show_liked_video
     @videoId = params[:videoId]
     @body_id = params[:id]
-    puts @videoId
-    puts @body_id
-    # if @workouts.nil? || @workouts.empty? || @body_id != @workouts[0]['bodyId']
-    #   retrieve_videos(@body_id, '')
-    # else
-    pull_liked_video_info(@body_id, @videoId)
-    session[:workouts] = @workouts
-    redirect_to profile_path(@body_id)
-    # end
+    session[:workouts] = pull_liked_video_info(@body_id, @videoId)
+    redirect_to workout_path(@body_id)
   end
   
   private
