@@ -11,7 +11,7 @@ RSpec.feature 'like workouts', type: :feature do
   # scenario 'Can like a video' do
   #   first(:css, '.btn-video').click
 
-  #   expect(page).to have_content('1 Likes')
+  #   expect(page.body).to have_content('1 Likes')
   # end
 
   # scenario 'Cannot like the same video twice' do
