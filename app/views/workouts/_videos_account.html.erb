@@ -3,6 +3,8 @@
   <% if workouts[0]["videoId"] == nil %>
     This video is broken
   <% else %>
+    Liking a video adds it to your profile!
+    <br />
     <% workout = Workout.find_by(videoId: workouts[0]["videoId"]) %>
 
     <%= link_to workout_likes_path(workout_id: workout.id), method: :post do %>
@@ -22,7 +24,6 @@
       </div> 
     <% end %>
 
-    <button class="btn btn-video my-3"> Add to profile </button>
     <br />
     <button class="btn btn-video my-3"> I have completed this workout today </button>
     </div>

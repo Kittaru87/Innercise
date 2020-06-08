@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     resources :likes
   end
 
-  get '/profile/:username' => 'accounts#index', as: :profile
+  post '/profile/:body_id' => 'accounts#show_liked_video', as: :profile_like
+  get '/profile/:username' => 'accounts#profile', as: :profile
   get '/terms_of_service' => 'home#terms_of_service'
   get '/about' => 'home#about'
   root 'home#index'

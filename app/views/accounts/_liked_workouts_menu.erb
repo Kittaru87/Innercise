@@ -1,0 +1,21 @@
+
+<div class="btn-group" role="group">
+  <button id="likedWorkouts" type="button" class="btn btn-secondary dropdown-toggle text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Workouts
+  </button>
+  <div class="dropdown-menu text-center" aria-labelledby="btnGroupDrop1">
+    <%= link_to "Arms", profile_path(:body_id => "Arms"), :remote => true %>
+    <br />
+    <%= link_to "Shoulders", profile_path(:body_id => "Shoulders"), :remote => true %>
+    <br />
+    <%= link_to "Core", profile_path(:body_id => "Core"), :remote => true %>
+    <br />
+    <%= link_to "Back", profile_path(:body_id => "Back"), :remote => true %>
+    <br />
+    <%= link_to "Glutes", profile_path(:body_id => "Glutes"), :remote => true %>
+    <br />
+    <%= link_to "Legs", profile_path(:body_id => "Legs"), :remote => true %>
+    <br />
+    <%= link_to "Yoga", profile_path(:body_id => "Yoga"), :remote => true %>
+  </div>
+</div>

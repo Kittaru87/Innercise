@@ -18,14 +18,11 @@
 <div class="mt-5 mx-3">
   <h4>Your liked workouts</h4>
   <div>
-  <% likeWorkout = Like.where(user_id: current_user.id) %>
-  <% likeWorkout.each do |like| %>
-    <div class="mb-2"> 
+  <%= render partial: "liked_workouts_menu", locals: { workouts: @all_workouts } %>
+  <br />
+  <br />
+  <%= render partial: "liked_workouts", locals: { workouts: @all_workouts } %>
 
-      <%= link_to like.workout.title, workout_path(like.workout.bodyId)  %>
-
-    </div>
-  <% end %>
   </div>
 
 </div>
