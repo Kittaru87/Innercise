@@ -5,8 +5,6 @@ class HomeController < ApplicationController
 
   def index; end
 
-  def profile; end
-
   def terms_of_service; end
 
   def about; end

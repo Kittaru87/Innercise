@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :likes
   end
 
-  get '/profile/:username' => 'home#profile', as: :profile
+  get '/profile/:username' => 'accounts#index', as: :profile
   get '/terms_of_service' => 'home#terms_of_service'
   get '/about' => 'home#about'
   root 'home#index'

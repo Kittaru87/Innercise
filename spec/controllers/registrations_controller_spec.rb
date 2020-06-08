@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe RegistrationsController, type: :controller do
+RSpec.describe AccountsController, type: :controller do
   before(:each) do
     @user = User.create { :user }
   end
