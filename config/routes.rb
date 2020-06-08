@@ -9,7 +9,6 @@ Rails.application.routes.draw do
     resources :likes
   end
 
-  get '/profile/:body_id' => 'accounts#show', as: :profile_like_show
   put '/profile/:body_id' => 'accounts#show_liked_video', as: :profile_like
   get '/terms_of_service' => 'home#terms_of_service'
   get '/about' => 'home#about'

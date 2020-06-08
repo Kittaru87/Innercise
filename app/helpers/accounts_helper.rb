@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 module AccountsHelper
-
-
   def pull_liked_video_info(body_id, videoId)
     if Rails.env.test?
       mock_video_array
@@ -13,13 +11,11 @@ module AccountsHelper
 
   private
 
-
   def liked_video_array(body_id, videoId)
     video_array = []
     video_array << pull_liked_workout(body_id, videoId)
     video_array
   end
-  
 
   def pull_liked_workout(_body_id, _videoId)
     workout = Workout.where(bodyId: _body_id, videoId: _videoId)
