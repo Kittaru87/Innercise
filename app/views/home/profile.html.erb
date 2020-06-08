@@ -15,8 +15,17 @@
   </div>
 </div>
 
-<div>
-<h4 class="mt-5 mx-3">Your liked workouts</h4>
+<div class="mt-5 mx-3">
+  <h4>Your liked workouts</h4>
+  <div>
+  <% likeWorkout = Like.where(user_id: current_user.id) %>
+  <% likeWorkout.each do |like| %>
+    <div class="mb-2"> 
 
+      <%= link_to like.workout.title, workout_path(like.workout.bodyId)  %>
+
+    </div>
+  <% end %>
+  </div>
 
 </div>
