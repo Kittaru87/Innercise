@@ -23,6 +23,6 @@ RSpec.describe LikesController, type: :controller do
     it 'deletes a like' do
       @like.destroy
       expect(@like).not_to be(Like)
-    end  
+    end
   end
 end
