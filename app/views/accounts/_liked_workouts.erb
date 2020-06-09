@@ -1,9 +1,10 @@
 <div>
   <% workouts.each do |like| %>
-    <div class="row col-md-6 mb-2"> 
+    <div class="row mb-2"> 
+      <div class="px-2 align-self-center">
       <%= link_to 'X', workout_like_path(:id =>like.id, :workout_id => like.workout_id), method: :delete %>
-      
-      <%= form_with url: profile_like_path(like.workout.bodyId), method: :put do |form| %>
+      </div>
+      <%= form_with url: profile_like_path(like.workout.bodyId), method: :put, class: "btn-primary" do |form| %>
         <%= hidden_field_tag(:videoId, like.workout.videoId) %>
         <%= hidden_field_tag(:id, like.workout.bodyId) %>
         <%= form.submit like.workout.title %>
