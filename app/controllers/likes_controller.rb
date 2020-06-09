@@ -12,6 +12,11 @@ class LikesController < ApplicationController
     redirect_to workout_path(@found_workout['bodyId'])
   end
 
+  def destroy
+    Like.destroy(params[:id])
+    redirect_to profile_path(username: current_user.username)
+  end
+
   private
 
   def find_workout
