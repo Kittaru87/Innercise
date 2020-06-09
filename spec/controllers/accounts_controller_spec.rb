@@ -9,7 +9,7 @@ RSpec.describe AccountsController, type: :controller do
     end
   end
 
-  # describe 'pull liked video info method' do
+  # describe 'PUT show liked videos' do
   #   it 'should return a nested array of liked video information' do
   #     id = "arms"
   #     @videoId = '12345'

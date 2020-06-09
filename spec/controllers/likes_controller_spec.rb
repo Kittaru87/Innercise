@@ -18,4 +18,11 @@ RSpec.describe LikesController, type: :controller do
   it 'creates a like' do
     expect(@like).to be_a_new(Like)
   end
+
+  describe 'POST' do
+    it 'deletes a like' do
+      @like.destroy
+      expect(@like).not_to be(Like)
+    end  
+  end
 end

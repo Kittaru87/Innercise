@@ -3,10 +3,6 @@
 class LikesController < ApplicationController
   before_action :find_workout
 
-  def index
-    @likes = Like.all
-  end
-
   def create
     if already_liked?
       flash[:notice] = "You can't like a workout more than once"
@@ -19,10 +15,6 @@ class LikesController < ApplicationController
   def destroy
     Like.destroy(params[:id])
     redirect_to profile_path(username: current_user.username)
-  end
-
-  def top_5
-    @popular = Like.popular
   end
 
   private
