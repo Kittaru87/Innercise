@@ -28,10 +28,15 @@
    color: #FB8F67;
  }
 
- input[type="submit" i] {
+ .liked-videos {
   border: none;
   background-color: white !important;
   padding: 2px;
+  white-space: normal;
+ }
+
+ .liked-videos:hover {
+  color: #FB8F67 !important;
  }
  
  .flex-display {
@@ -137,7 +142,7 @@
 
  @media only screen and (max-width : 792px) {
 
-  input[type="submit" i] {
+  .liked-videos {
     white-space: normal;
   }
 
