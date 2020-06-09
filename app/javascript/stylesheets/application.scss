@@ -28,6 +28,17 @@
    color: #FB8F67;
  }
 
+ .liked-videos {
+  border: none;
+  background-color: white !important;
+  padding: 2px;
+  white-space: normal;
+ }
+
+ .liked-videos:hover {
+  color: #FB8F67 !important;
+ }
+ 
  .flex-display {
   display: flex;
  }
@@ -46,6 +57,22 @@
   background-color: #FB8F67 !important;
 }
 
+.btn-video {
+  border: solid 2px #156064 !important;
+}
+
+.btn-video:hover, .btn-video:active {
+  border: solid 2px #FB8F67 !important;
+  background-color: #FB8F67 !important;
+  color: white;
+}
+
+.btn-video-liked {
+  background-color: #FB8F67 !important;
+  background-color: #FB8F67 !important;
+  color: white;
+}
+
 .video-div {
   margin: 3em;
   margin-bottom: 1em;
@@ -53,7 +80,7 @@
 
 .rhs-info {
  width: 100%; 
- margin: 1em;
+//  margin: 1em;
  margin-left: auto;
  padding: 15px;
 }
@@ -110,6 +137,17 @@
 
   #rhs-profile-div {
     display: none;
+  }
+ }
+
+ @media only screen and (max-width : 792px) {
+
+  .liked-videos {
+    white-space: normal;
+  }
+
+  #delete-like {
+    white-space: normal;
   }
  }
 

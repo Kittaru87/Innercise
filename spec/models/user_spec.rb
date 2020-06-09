@@ -33,5 +33,4 @@ RSpec.describe User, type: :model do
     subject.password = '12345678910'
     expect(subject).to_not be_valid
   end
-
 end

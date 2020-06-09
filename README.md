@@ -11,6 +11,7 @@ Access [Innercise](https://innercise.herokuapp.com/) via Heroku.
 **Tech used**: Ruby on Rails, Rspec, Capybara, Rubocop, Coveralls, Travis CI, Heroku
 
 foreman start -f Procfile.dev
+rails db:sessions:trim
 
 ## Setup
 ```
@@ -49,5 +50,11 @@ User journey:
 - Style Devise standard views
 - Add profile page
 
+**4th iteration - add ability to like workouts and display on profile page**
+
+- create likes join table
+- add button functionality to video page
+- show liked videos on profile page
+- show top liked videos on index page
 
 

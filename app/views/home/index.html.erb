@@ -115,7 +115,7 @@
       </div>
 
         <div class="rhs-info">
-          <%= render partial: "most_popular" %> 
+          <%= render partial: "most_popular", locals: { workouts: @workouts, id: @body_id, top_5: @top_5 } %> 
         </div>
 
         <div class="rhs-info">

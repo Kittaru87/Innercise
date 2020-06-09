@@ -5,9 +5,9 @@ class WorkoutsController < ApplicationController
 
   def show
     @workouts = session[:workouts]
-    @workout_id = params[:id]
-    if @workouts.nil? || @workouts.empty? || @workout_id != @workouts[0]['bodyId']
-      retrieve_videos(@workout_id, '')
+    @body_id = params[:id]
+    if @workouts.nil? || @workouts.empty? || @body_id != @workouts[0]['bodyId']
+      retrieve_videos(@body_id, '')
     else
       @workouts
     end
@@ -15,16 +15,16 @@ class WorkoutsController < ApplicationController
 
   def update
     @next_page = params[:nextPageToken]
-    @workout_id = params[:id]
-    retrieve_videos(@workout_id, @next_page)
+    @body_id = params[:id]
+    retrieve_videos(@body_id, @next_page)
     session[:workouts] = @workouts
-    redirect_to workout_path(@workout_id)
+    redirect_to workout_path(@body_id)
   end
 
   private
 
-  def retrieve_videos(workout_id, next_page)
-    videos = api_call(workout_id, next_page)
-    @workouts = pull_video_info(workout_id, videos)
+  def retrieve_videos(body_id, next_page)
+    videos = api_call(body_id, next_page)
+    @workouts = pull_video_info(body_id, videos)
   end
 end
