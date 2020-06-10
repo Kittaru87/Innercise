@@ -3,10 +3,31 @@
 require 'rails_helper'
 
 RSpec.feature 'like workouts', type: :feature do
+  let(:workout) { double :workout, id: 1 }
+  
   before(:each) do
     sign_up
     click_link 'ARMS'
   end
+
+  # it "won't throw an error when a video is liked" do
+  #   click_button 'Like'
+  #   expect { page }.to_not raise_error
+  # end
+
+  # it "will register a like" do
+    
+  #   click_button 'Like'
+  #   expect(page.body).to have_content('1 Likes')
+  # end
+
+  # it "will not allow you like the same video twice" do
+    
+  #   click_button 'Like'
+  #   click_button 'Like'
+
+  #   expect(page).to have_content("You can't like a workout more than once")
+  # end
 
   # scenario 'Can like a video' do
   #   first(:css, '.btn-video').click

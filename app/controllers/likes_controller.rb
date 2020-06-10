@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class LikesController < ApplicationController
+  include LikesHelper
   before_action :find_workout
 
   def create
@@ -15,6 +16,13 @@ class LikesController < ApplicationController
   def destroy
     Like.destroy(params[:id])
     redirect_to profile_path(username: current_user.username)
+  end
+
+  def show_liked_video
+    @videoId = params[:videoId]
+    @body_id = params[:id]
+    session[:workouts] = pull_liked_video_info(@body_id, @videoId)
+    redirect_to workout_path(@body_id)
   end
 
   private
