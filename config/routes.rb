@@ -9,9 +9,8 @@ Rails.application.routes.draw do
     resources :likes
   end
 
-  put '/profile/:body_id' => 'accounts#show_liked_video', as: :profile_like
+  put '/profile/:body_id' => 'likes#show_liked_video', as: :profile_like
   get '/terms_of_service' => 'home#terms_of_service'
   get '/about' => 'home#about'
-  get '/likes' => 'likes#top_5'
   root 'home#index'
 end

@@ -3,10 +3,19 @@
 require 'rails_helper'
 
 RSpec.describe AccountsController, type: :controller do
+  before(:each) do
+    @user = User.create { :user }
+    @workout = Workout.create { :workout }
+  end
+
   describe 'GET #index' do
     it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
+  end
+
+  it 'should have a current_user' do
+    expect(@user).to_not eq(nil)
   end
 
   # describe 'PUT show liked videos' do

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe AccountsHelper do
+describe LikesHelper do
   describe 'pull liked video info method' do
     it 'should return a nested array of liked video information' do
       bodyId = 'arms'

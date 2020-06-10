@@ -11,6 +11,7 @@ Access [Innercise](https://innercise.herokuapp.com/) via Heroku.
 **Tech used**: Ruby on Rails, Rspec, Capybara, Rubocop, Coveralls, Travis CI, Heroku
 
 foreman start -f Procfile.dev
+
 rails db:sessions:trim
 
 ## Setup
