@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :workouts do
     resources :likes
-    resources :completedworkouts
+    resources :completed_workouts
   end
 
   put '/profile/:body_id' => 'likes#show_liked_video', as: :profile_like

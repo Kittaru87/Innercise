@@ -25,7 +25,11 @@
     <% end %>
 
     <br />
-    <button class="btn btn-video my-3"> I have completed this workout today </button>
+    <%= link_to workout_completed_workouts_path(workout_id: workout.id), method: :post do %>
+      <button class="btn btn-video my-3"> 
+        I have completed this workout today
+      </button>
+    <% end %>
     </div>
 
   <% end %> 
