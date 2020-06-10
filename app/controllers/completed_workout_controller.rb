@@ -1,2 +1,0 @@
-class CompletedWorkoutController < ApplicationController
-end
