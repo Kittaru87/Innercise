@@ -9,5 +9,6 @@ class User < ApplicationRecord
   validates :username, presence: true
 
   has_many :likes, dependent: :destroy
+  has_many :completed_workouts, dependent: :destroy
  
 end
