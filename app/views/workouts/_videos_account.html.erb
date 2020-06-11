@@ -20,10 +20,10 @@
         </button>
       <% end %>
 
+      <% end %>
       <div class="rhs-info">
       <%= Like.where(workout_id: workout.id).length %> Likes
       </div> 
-    <% end %>
 
     <br />
     <%= link_to workout_completed_workouts_path(workout_id: workout.id), method: :post do %>
