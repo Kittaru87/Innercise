@@ -3,19 +3,20 @@
   <% if workouts[0]["videoId"] == nil %>
     This video is broken
   <% else %>
-    Liking a video adds it to your profile!
-    <br />
-    <% workout = Workout.find_by(videoId: workouts[0]["videoId"]) %>
-
-    <%= link_to workout_likes_path(workout_id: workout.id), method: :post do %>
-      <% likeWorkout = Like.where(user_id: current_user.id, workout_id: workout.id).length %>
-      <% if likeWorkout == 0 %>
+  <br />
+  <% workout = Workout.find_by(videoId: workouts[0]["videoId"]) %>
+  
+  <%= link_to workout_likes_path(workout_id: workout.id), method: :post do %>
+    <% likeWorkout = Like.where(user_id: current_user.id, workout_id: workout.id).length %>
+    <% if likeWorkout == 0 %>
+        Liking a video adds it to your profile!
+        <br />
         <button class="btn-video btn my-3">
           Like
         </button>
       <% else %>
         <button class="btn-video-liked btn my-3">
-          Like
+          Added to profile
         </button>
       <% end %>
 

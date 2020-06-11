@@ -6,7 +6,7 @@ class LikesController < ApplicationController
 
   def create
     if already_liked?
-      flash[:notice] = "You can't like a workout more than once"
+      flash[:notice] = "You can't add a workout to your profile more than once"
     else
       @workout = Like.create(user_id: current_user.id, workout_id: params[:workout_id])
     end
@@ -18,12 +18,12 @@ class LikesController < ApplicationController
     redirect_to profile_path(username: current_user.username)
   end
 
-  def show_liked_video
-    @videoId = params[:videoId]
-    @body_id = params[:id]
-    session[:workouts] = pull_liked_video_info(@body_id, @videoId)
-    redirect_to workout_path(@body_id)
-  end
+  # def show_liked_video
+  #   @videoId = params[:videoId]
+  #   @body_id = params[:id]
+  #   session[:workouts] = pull_liked_video_info(@body_id, @videoId)
+  #   redirect_to workout_path(@body_id)
+  # end
 
   private
 
