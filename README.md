@@ -58,4 +58,10 @@ User journey:
 - show liked videos on profile page
 - show top liked videos on index page
 
+**5th iteration - add ability to complete a workout and show in your stats**
+
+- create completed_workouts join table
+- make the button work
+- display the stats on the front page when signed in and in profile
+
 
