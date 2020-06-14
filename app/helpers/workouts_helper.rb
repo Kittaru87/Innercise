@@ -34,7 +34,7 @@ module WorkoutsHelper
       video_array(body_id, _response_hash)
     end
   end
-
+  
   private
 
   def video_array(body_id, response_hash)

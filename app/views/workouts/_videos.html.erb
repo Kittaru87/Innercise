@@ -20,7 +20,9 @@
     <% if user_signed_in? %>
 
       <%= render partial: "videos_account", locals: { workouts: @workouts } %>
+    <% else %>
 
+      <%= render partial: "videos_public", locals: { workouts: @workouts, id: @body_id } %>
     <% end %> 
   </div>
 
