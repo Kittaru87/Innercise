@@ -10,5 +10,4 @@ class User < ApplicationRecord
 
   has_many :likes, dependent: :destroy
   has_many :completed_workouts, dependent: :destroy
- 
 end

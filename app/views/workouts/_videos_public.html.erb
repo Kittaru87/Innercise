@@ -15,9 +15,7 @@
     <% singular_id = id.chop if id[-1] == 's' %>
     <h3 class="text-center" style="margin-block-end: 1em;">Most Popular <%= singular_id.capitalize %> Workouts</h3>
     
-
     <% top_5 = Like.body_popular %>
- 
     <% top_5.each do |like| %>
       <% if id == like.bodyId %>
         <%= form_with url: profile_like_path(like.bodyId), method: :put do |form| %>

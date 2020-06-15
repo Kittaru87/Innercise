@@ -39,5 +39,4 @@ module LikesHelper
   #     'channel' => 'mock channel'
   #   }]
   # end
-
 end

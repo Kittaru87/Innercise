@@ -7,7 +7,6 @@ class AccountsController < ApplicationController
     @all_workouts = Like.where(user_id: current_user.id)
   end
 
-
   def show_liked_video
     @videoId = params[:videoId]
     @body_id = params[:id]
