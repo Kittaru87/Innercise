@@ -11,22 +11,23 @@
 
     <div>
     <div class="border py-4 px-3">
-    <h3 class="text-center" style="margin-block-end: 1em;">Most Popular</h3>
+    <h3 class="text-center" style="margin-block-end: 1em;">Most Popular <%= id.capitalize %> Workouts</h3>
     
+
     <% top_5 = Like.body_popular %>
-    <% puts top_5 %>
-    <% if false %>
+ 
     <% top_5.each do |like| %>
-    
-      <%= form_with url: profile_like_path(like.bodyId), method: :put do |form| %>
-        <%= hidden_field_tag(:videoId, like.videoId) %>
-        <%= hidden_field_tag(:id, like.bodyId) %>
-        <%= form.submit like.title, class: "liked-videos" %>
+      <% if id == like.bodyId %>
+        <%= form_with url: profile_like_path(like.bodyId), method: :put do |form| %>
+          <%= hidden_field_tag(:videoId, like.videoId) %>
+          <%= hidden_field_tag(:id, like.bodyId) %>
+          <%= form.submit like.title, class: "liked-videos" %>
+        <% end %>
+        <br />
+        <p>*******</p>
+        <% end %>
       <% end %>
-    <% end %>
-      <br />
-      <p>*******</p>
-    <% end %>
+
     </div>
     
 

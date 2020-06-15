@@ -4,6 +4,7 @@
 <% top_5 = Like.popular %>
 
 <% top_5.each do |like| %>
+  
   <%= form_with url: profile_like_path(like.workout.bodyId), method: :put do |form| %>
     <%= hidden_field_tag(:videoId, like.workout.videoId) %>
     <%= hidden_field_tag(:id, like.workout.bodyId) %>
