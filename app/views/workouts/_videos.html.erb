@@ -1,6 +1,8 @@
 
 <header class="md-4" style="margin: 2em;">
-  <h2 class="text-center"><%= id.capitalize %> workouts</h2>
+  <% singular_id = id %>
+  <% singular_id = id.chop if id[-1] == 's' %>
+  <h2 class="text-center"><%= singular_id.capitalize %> workouts</h2>
 </header>
 <section class="row">
 
@@ -20,7 +22,9 @@
     <% if user_signed_in? %>
 
       <%= render partial: "videos_account", locals: { workouts: @workouts } %>
+    <% else %>
 
+      <%= render partial: "videos_public", locals: { workouts: @workouts, id: @body_id } %>
     <% end %> 
   </div>
 

@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 module AccountsHelper
-    def pull_liked_video_info(body_id, videoId)
+  def pull_liked_video_info(body_id, videoId)
     if Rails.env.test?
       mock_video_array
     else
       liked_video_array(body_id, videoId)
     end
-  end
+end
 
   private
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateCompletedWorkouts < ActiveRecord::Migration[6.0]
   def change
     create_table :completed_workouts do |t|

@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.feature 'like workouts', type: :feature do
   let(:workout) { double :workout, id: 1 }
-  
+
   before(:each) do
     sign_up
     click_link 'ARMS'
@@ -16,13 +16,13 @@ RSpec.feature 'like workouts', type: :feature do
   # end
 
   # it "will register a like" do
-    
+
   #   click_button 'Like'
   #   expect(page.body).to have_content('1 Likes')
   # end
 
   # it "will not allow you like the same video twice" do
-    
+
   #   click_button 'Like'
   #   click_button 'Like'
 
