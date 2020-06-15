@@ -1,6 +1,8 @@
 
 <header class="md-4" style="margin: 2em;">
-  <h2 class="text-center"><%= id.capitalize %> workouts</h2>
+  <% singular_id = id %>
+  <% singular_id = id.chop if id[-1] == 's' %>
+  <h2 class="text-center"><%= singular_id.capitalize %> workouts</h2>
 </header>
 <section class="row">
 

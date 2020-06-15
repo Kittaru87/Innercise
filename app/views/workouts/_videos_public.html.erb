@@ -11,7 +11,9 @@
 
     <div>
     <div class="border py-4 px-3">
-    <h3 class="text-center" style="margin-block-end: 1em;">Most Popular <%= id.capitalize %> Workouts</h3>
+    <% singular_id = id %>
+    <% singular_id = id.chop if id[-1] == 's' %>
+    <h3 class="text-center" style="margin-block-end: 1em;">Most Popular <%= singular_id.capitalize %> Workouts</h3>
     
 
     <% top_5 = Like.body_popular %>
