@@ -17,7 +17,7 @@
     
     <% top_5 = Like.body_popular %>
     <% top_5.each do |like| %>
-      <% if id == like.bodyId %>
+      <% if id == like.bodyId%>
         <%= form_with url: profile_like_path(like.bodyId), method: :put do |form| %>
           <%= hidden_field_tag(:videoId, like.videoId) %>
           <%= hidden_field_tag(:id, like.bodyId) %>

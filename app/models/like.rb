@@ -9,5 +9,6 @@ class Like < ApplicationRecord
   scope :body_popular, lambda {
                          Workout.joins(:likes)
                                 .select('likes.workout_id', 'bodyId', 'videoId', 'title')
+                                .distinct
                        }
 end
