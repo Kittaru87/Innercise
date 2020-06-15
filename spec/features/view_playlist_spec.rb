@@ -9,13 +9,13 @@ RSpec.feature 'Pull up list of videos', type: :feature do
 
   it 'can navigate to the arms workout page' do
     click_link 'ARMS'
-    expect(page).to have_content('Arms workouts')
+    expect(page).to have_content('Arm workouts')
     expect { page }.to_not raise_error
   end
 
   it 'can navigate to the shoulders workout page' do
     click_link 'SHOULDERS'
-    expect(page).to have_content('Shoulders workouts')
+    expect(page).to have_content('Shoulder workouts')
     expect { page }.to_not raise_error
   end
 
@@ -33,13 +33,13 @@ RSpec.feature 'Pull up list of videos', type: :feature do
 
   it 'can navigate to the glutes workout page' do
     click_link 'GLUTES'
-    expect(page).to have_content('Glutes workouts')
+    expect(page).to have_content('Glute workouts')
     expect { page }.to_not raise_error
   end
 
   it 'can navigate to the legs workout page' do
     click_link 'LEGS'
-    expect(page).to have_content('Legs workouts')
+    expect(page).to have_content('Leg workouts')
     expect { page }.to_not raise_error
   end
 
