@@ -3,12 +3,13 @@
 require 'rails_helper'
 
 RSpec.feature 'like workouts', type: :feature do
-  let(:workout) { double :workout, id: 1 }
 
-  before(:each) do
-    sign_up
-    click_link 'ARMS'
-  end
+  # let(:workout) { double :workout, id: 1 }
+
+  # before(:each) do
+  #   sign_up
+  #   click_link 'ARMS'
+  # end
 
   # it "won't throw an error when a video is liked" do
   #   click_button 'Like'

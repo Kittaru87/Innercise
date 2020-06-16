@@ -6,6 +6,8 @@ Coveralls.wear!('rails')
 require 'simplecov'
 require 'simplecov-console'
 require 'features/web_helpers'
+# require "devise/test_helpers"
+# include Devise::TestHelpers
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
                                                                  SimpleCov::Formatter::Console,
