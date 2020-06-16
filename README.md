@@ -95,4 +95,16 @@ $ rubocop
 - make the button work
 - display the stats on the front page when signed in and in profile
 
+**6th iteration - add in more functionality for public view & jquery features**
 
+- create most popular partial for public videos view
+- jquery 
+  - drop down menu in profile
+  - add video to profile page doesn't reload page
+  - completed workout button doesn't reload page
+
+**7th iteration - calendar view to profile page**
+
+- create a calendar view on the profile page that shows what workouts you have completed in the week
+  - different colours per workouts type?
+  - alerts to identify which areas are missing?

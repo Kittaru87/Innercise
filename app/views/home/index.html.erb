@@ -105,23 +105,19 @@
       </div>
     
       <div class="responsive-column col-lg-3 float-right text-center">
-        
-      <div id="rhs-profile-div">
-        <% if user_signed_in? %>
-          <div class="rhs-info">
-            <%= render partial: "profile_overview", locals: { all_time: @all_time } %>
-          </div>
-        <% end %>
-      </div>
-
+        <div id="rhs-profile-div">
+          <% if user_signed_in? %>
+            <div class="rhs-info">
+              <%= render partial: "profile_overview", locals: { all_time: @all_time } %>
+            </div>
+          <% end %>
+        </div>
         <div class="rhs-info">
           <%= render partial: "most_popular", locals: { workouts: @workouts, id: @body_id } %> 
         </div>
-
         <div class="rhs-info">
           <%= render partial: "recommended" %> 
         </div>
-
       </div>
     </section>
 
