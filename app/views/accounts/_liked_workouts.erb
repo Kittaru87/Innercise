@@ -1,6 +1,6 @@
 <div>
   <% workouts.each do |like| %>
-    <div class="row mb-2"> 
+    <div class="row mb-2">
       <div class="px-2 align-self-center">
       <%= link_to 'X', workout_like_path(:id =>like.id, :workout_id => like.workout_id), method: :delete %>
       </div>
