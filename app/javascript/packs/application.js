@@ -17,11 +17,20 @@ global.$ = require('jquery')
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+document.addEventListener("turbolinks:load", function() { 
+  // jQuery(document).ready(function($) {
+    // $(document).on('turbolinks:load', function() {
 
-$(document).ready(function() {
-  $('#colour').click(function(){
-      console.log("I was clicked!!");
-      $('#colour').attr('class', 'green');
-    })
+      $('#colour').click(function(){
+        console.log("I was clicked!!");
+        $('#colour').attr('class', 'green');
+      })
 
-})
+      $('#btn-video').click(function() {
+        console.log("I like this video");
+        $('#btn-video').attr('class', 'btn-video-liked');
+      });
+
+      // });
+    // });
+ })

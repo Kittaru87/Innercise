@@ -10,7 +10,7 @@ class LikesController < ApplicationController
     else
       @workout = Like.create(user_id: current_user.id, workout_id: params[:workout_id])
     end
-    redirect_to workout_path(@found_workout['bodyId'])
+    # redirect_to workout_path(@found_workout['bodyId'])
   end
 
   def destroy
