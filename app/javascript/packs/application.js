@@ -17,11 +17,7 @@ global.$ = require('jquery')
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-document.addEventListener("turbolinks:load", function() { 
-
-  $('#colour').click(function(){
-    $('#colour').attr('class', 'green');
-  })
+document.addEventListener("turbolinks:load", function() {
 
   $('#like-btn-id').click(function() {
     let currentLikes = parseInt($('#like-count-id').text());
@@ -30,4 +26,9 @@ document.addEventListener("turbolinks:load", function() { 
     $('#like-count-id').text(currentLikes + 1);
   });
 
- })
+  $('#completed-btn-id').click(function() {
+    $('#completed-btn-id').html('Well done on completing this workout today!');
+    $('#complete-btn-id').attr('class', 'btn-video-liked btn my-3');
+  });
+  
+})

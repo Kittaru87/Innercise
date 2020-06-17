@@ -2,15 +2,14 @@
 
 module CompletedWorkoutHelper
   def all_time
-    @all_time = CompletedWorkout.where(user_id: current_user.id).count
+    @all_time = CompletedWorkout.all_time(current_user.id).count
   end
 
   def one_week
-    @one_week = CompletedWorkout.where(user_id: current_user.id).where('created_at >= ?', 1.week.ago).count
-    # date_trunc('week', current_date)
+    @one_week = CompletedWorkout.week(current_user.id).count.values[0]
   end
 
   def one_month
-    @one_month = CompletedWorkout.where(user_id: current_user.id).where('created_at >= ?', 1.month.ago).count
+    @one_month = CompletedWorkout.month(current_user.id).count.values[0]
   end
 end
