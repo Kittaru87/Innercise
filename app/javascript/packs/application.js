@@ -18,24 +18,16 @@ global.$ = require('jquery')
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 document.addEventListener("turbolinks:load", function() { 
-  // jQuery(document).ready(function($) {
-    // $(document).on('turbolinks:load', function() {
 
-      $('#colour').click(function(){
-        console.log("I was clicked!!");
-        $('#colour').attr('class', 'green');
-      })
+  $('#colour').click(function(){
+    $('#colour').attr('class', 'green');
+  })
 
-      $('#like-btn-id').click(function() {
-        let currentLikes = parseInt($('#like-count-id').text());
-        console.log(currentLikes);
-        console.log("I like this video");
-        $('#like-btn-id').attr('class', 'btn-video-liked btn my-3');
-        $('#like-btn-id').html('Added to profile');
-        $('#like-count-id').text(currentLikes + 1);
-      });
+  $('#like-btn-id').click(function() {
+    let currentLikes = parseInt($('#like-count-id').text());
+    $('#like-btn-id').attr('class', 'btn-video-liked btn my-3');
+    $('#like-btn-id').html('Added to profile');
+    $('#like-count-id').text(currentLikes + 1);
+  });
 
-
-      // });
-    // });
  })
