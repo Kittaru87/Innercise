@@ -11,7 +11,7 @@
     <% likeWorkout = Like.where(user_id: current_user.id, workout_id: workout.id).length %>
     <% if likeWorkout == 0 %>
         <br />
-        <button id="btn-video" class="btn-video btn my-3">
+        <button id="like-btn-id" class="btn-video btn my-3">
           Like
         </button>
       <% else %>
@@ -22,7 +22,7 @@
 
       <% end %>
       <div class="rhs-info">
-      <%= Like.where(workout_id: workout.id).length %> Likes
+        <span id="like-count-id"><%= Like.workout_likes(workout.id).length %></span> Likes
       </div>
 
     <br />
