@@ -7,7 +7,7 @@ describe AccountsHelper do
     it 'should return a nested array of liked video information' do
       bodyId = 'arms'
       videoId = '12345'
-      expect(pull_liked_video_info(bodyId, videoId)).to eq [{ 'bodyId' => 'arms', 'channel' => 'mock channel', 'description' => 'test', 'title' => 'mock video', 'videoId' => '12345' }]
+      expect(pull_liked_video_info(bodyId, videoId)).to eq [{ 'id' => '1', 'bodyId' => 'arms', 'channel' => 'mock channel', 'description' => 'test', 'title' => 'mock video', 'videoId' => '12345' }]
     end
   end
 end
