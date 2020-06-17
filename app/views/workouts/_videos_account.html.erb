@@ -5,11 +5,11 @@
   <% else %>
   <br />
   <% workout = Workout.find_by(videoId: workouts[0]["videoId"]) %>
-  
+
+  Liking a video adds it to your profile!
   <%= link_to workout_likes_path(workout_id: workout.id), method: :post do %>
     <% likeWorkout = Like.where(user_id: current_user.id, workout_id: workout.id).length %>
     <% if likeWorkout == 0 %>
-        Liking a video adds it to your profile!
         <br />
         <button class="btn-video btn my-3">
           Like
@@ -23,17 +23,19 @@
       <% end %>
       <div class="rhs-info">
       <%= Like.where(workout_id: workout.id).length %> Likes
-      </div> 
+      </div>
 
     <br />
     <%= link_to workout_completed_workouts_path(workout_id: workout.id), method: :post do %>
-      <button class="btn btn-video my-3"> 
+      <button class="btn btn-video my-3">
         I have completed this workout today
       </button>
     <% end %>
- 
+
     </div>
 
-  <% end %> 
+  <% end %>
+
+  <button id="colour" class="red">Red</button>
 
 </div>
