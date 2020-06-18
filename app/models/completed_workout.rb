@@ -4,7 +4,8 @@ class CompletedWorkout < ApplicationRecord
   belongs_to :workout
   belongs_to :user
 
-  scope :week, -> { select('current_user, count(user_id) as count').where('created_at > ?', 1.week.ago).group(:user_id) }
-
-  # SELECT user_id, count(user_id) as count FROM "completed_workouts" WHERE created_at > current_date - interval '7 days' AND user_id = 5 GROUP BY user_id
+  scope :week, -> (user_id){ select('current_user').group(:user_id).where('created_at > ?', 1.week.ago).where(user_id: user_id) }
+  scope :month, -> (user_id){ select('current_user').group(:user_id).where('created_at > ?', 1.month.ago).where(user_id: user_id) }
+  scope :all_time, -> (user_id){ select('current_user').where(user_id: user_id) }
+  
 end
