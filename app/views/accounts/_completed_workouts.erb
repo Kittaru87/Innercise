@@ -1,0 +1,15 @@
+<div>
+  <% week_workouts.each do |completed_workout| %>
+
+    <p class="profile-box-style px-2 py-2 "><strong><%=completed_workout.workout.bodyId.capitalize%></strong></p>
+
+    <div class="row mb-2">
+      <%= form_with url: profile_like_path(completed_workout.workout.bodyId), method: :put, class: "ml-3" do |form| %>
+        <%= hidden_field_tag(:videoId, completed_workout.workout.videoId) %>
+        <%= hidden_field_tag(:id, completed_workout.workout.bodyId) %>
+      
+        <%= form.submit completed_workout.workout.title, class: "liked-videos" %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

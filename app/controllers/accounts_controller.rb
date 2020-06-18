@@ -5,6 +5,7 @@ class AccountsController < ApplicationController
 
   def profile
     @all_workouts = Like.where(user_id: current_user.id)
+    @week_workouts = CompletedWorkout.where(user_id: current_user.id).where('created_at >= ?', 1.week.ago)
   end
 
   def show_liked_video

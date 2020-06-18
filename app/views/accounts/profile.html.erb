@@ -15,12 +15,20 @@
   </div>
 </div>
 
-<div class="mt-5 mx-3">
-  <h4>Your liked workouts</h4>
-  <div>
-    <%# render partial: "liked_workouts_menu", locals: { workouts: @all_workouts } %>
-    <br />
-    <br />
-    <%= render partial: "liked_workouts", locals: { workouts: @all_workouts } %>
+
+<div class="row">
+  <div class="mt-5 mx-3 col-lg-6">
+    <h4>Your liked workouts</h4>
+    <div>
+      <%# render partial: "liked_workouts_menu", locals: { workouts: @all_workouts } %>
+      <br />
+      <br />
+      <%= render partial: "liked_workouts", locals: { workouts: @all_workouts } %>
+
+    </div>
+  </div>
+  <div class="mt-5 mx-3 col-lg-5">
+    <h4>This week's completed workouts</h4>
+      <%= render partial: "completed_workouts", locals: { week_workouts: @week_workouts } %>
   </div>
 </div>
