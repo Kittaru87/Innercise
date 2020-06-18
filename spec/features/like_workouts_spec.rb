@@ -12,8 +12,9 @@ RSpec.feature 'like workouts', type: :feature do
   # end
 
   # it "won't throw an error when a video is liked" do
-  #   click_button 'Like'
-  #   expect { page }.to_not raise_error
+  #   # sleep 10
+  #   # click_button 'Like'
+  #   # expect { page }.to_not raise_error
   # end
 
   # it "will register a like" do
