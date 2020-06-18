@@ -7,6 +7,7 @@
   <% workout = Workout.find_by(videoId: workouts[0]["videoId"]) %>
 
   Liking a video adds it to your profile!
+  <br />
   <%= link_to workout_likes_path(workout_id: workout.id), method: :post do %>
     <% likeWorkout = Like.where(user_id: current_user.id, workout_id: workout.id).length %>
     <% if likeWorkout == 0 %>
