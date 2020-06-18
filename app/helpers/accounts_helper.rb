@@ -32,6 +32,7 @@ end
 
   def mock_video_array
     video_array = [{
+      'id' => '1',
       'bodyId' => 'arms',
       'videoId' => '12345',
       'title' => 'mock video',
