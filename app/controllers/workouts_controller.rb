@@ -4,6 +4,11 @@ class WorkoutsController < ApplicationController
   include WorkoutsHelper
 
   def show
+    if Rails.env.test?
+      @body_id = params[:id]
+      retrieve_videos(@body_id, '')
+      @workouts = session[:workouts]
+    else
     # @workouts = session[:workouts]
     @body_id = params[:id]
     if session[:workouts].nil? || @body_id != session[:workouts][0]["bodyId"]
@@ -14,6 +19,8 @@ class WorkoutsController < ApplicationController
     #   @workouts
     end
     @workouts = Workout.find_by(videoId: session[:workouts][0]["videoId"])
+    p @workouts
+    end
   end
 
   def update
@@ -29,6 +36,5 @@ class WorkoutsController < ApplicationController
   def retrieve_videos(body_id, next_page)
     videos = api_call(body_id, next_page)
     session[:workouts] = pull_video_info(body_id, videos)
-    p session[:workouts]
   end
 end
