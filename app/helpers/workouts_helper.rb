@@ -15,24 +15,24 @@ module WorkoutsHelper
   API_PARTIAL_URL = "key=#{ENV['YT_API_KEY']}"
 
   def api_call(workout, next_page = '')
-    if Rails.env.test?
-      'success'
-    else
+    # if Rails.env.test?
+    #   'success'
+    # else
       workout_params = "#{workout}&"
       next_page_params = "&pageToken=#{next_page}"
 
       response = HTTParty.get(BASE_URL + VIEW + RESULT_NO + PERM_SEARCH_PARAMS + workout_params + API_PARTIAL_URL + next_page_params).to_json
 
       response_hash = JSON.parse(response)
-    end
+    # end
   end
 
   def pull_video_info(body_id, _response_hash)
-    if Rails.env.test?
-      mock_video_array
-    else
+    # if Rails.env.test?
+    #   mock_video_array
+    # else
       video_array(body_id, _response_hash)
-    end
+    # end
   end
 
   private

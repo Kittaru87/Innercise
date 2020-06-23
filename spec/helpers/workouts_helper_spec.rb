@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
+require 'webmock/rspec'
 
 describe WorkoutsHelper do
   describe 'api call method' do
@@ -10,7 +11,18 @@ describe WorkoutsHelper do
     end
   end
 
-  describe 'pull video info method' do
+  fdescribe 'pull video info method' do
+    before do
+      stub_request(:get, "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCpv4b_OMXeu4NDinuhxLKtuR7YYvgzyec&maxResults=1&pageToken=&part=snippet&q=workout,%20home,%20arms").
+         with(
+           headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent'=>'Ruby'
+           }).
+         to_return(status: 200, body: "", headers: {})
+    end
+
     it 'should return a nested array of video information' do
       workout = 'arms'
       response = helper.api_call(workout)
