@@ -13,7 +13,7 @@ describe WorkoutsHelper do
 
   fdescribe 'pull video info method' do
     before do
-      stub_request(:get, "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCpv4b_OMXeu4NDinuhxLKtuR7YYvgzyec&maxResults=1&pageToken=&part=snippet&q=workout,%20home,%20arms").
+      stub_request(:get, "https://www.googleapis.com/youtube/v3/search?key=#{ENV['YT_API_KEY']}&maxResults=1&pageToken=&part=snippet&q=workout,%20home,%20arms").
          with(
            headers: {
           'Accept'=>'*/*',
