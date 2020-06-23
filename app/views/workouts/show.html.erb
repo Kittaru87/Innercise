@@ -11,13 +11,13 @@
     <div class="row justify-content-between">
       <div class="mt-4">
         <%= form_with url: workout_path(@body_id), method: :put do |form| %>
-          <%= hidden_field_tag(:nextPageToken, @workouts[0]['prevPageToken']) %>
+          <%= hidden_field_tag(:nextPageToken, @workouts.prevPageToken) %>
           <%= form.submit "Previous", class: "btn btn-default btn-primary ml-3" %>
         <% end %>
       </div>
       <div class="mt-4">
         <%= form_with url: workout_path(@body_id), method: :put do |form| %>
-          <%= hidden_field_tag(:nextPageToken, @workouts[0]['nextPageToken']) %>
+          <%= hidden_field_tag(:nextPageToken, @workouts.nextPageToken) %>
           <%= form.submit "Next", class: "btn btn-default btn-primary mr-3" %>
         <% end %>
       </div>

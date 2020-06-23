@@ -4,20 +4,23 @@ class WorkoutsController < ApplicationController
   include WorkoutsHelper
 
   def show
-    @workouts = session[:workouts]
+    # @workouts = session[:workouts]
     @body_id = params[:id]
-    if @workouts.nil? || @workouts.empty? || @body_id != @workouts[0]['bodyId']
+    if session[:workouts].nil? || @body_id != session[:workouts][0]["bodyId"]
+      p "retrieve_videos(@body_id, '')"
       retrieve_videos(@body_id, '')
-    else
-      @workouts
+    # else
+    #   p "@workouts"
+    #   @workouts
     end
+    @workouts = Workout.find_by(videoId: session[:workouts][0]["videoId"])
   end
 
   def update
     @next_page = params[:nextPageToken]
     @body_id = params[:id]
     retrieve_videos(@body_id, @next_page)
-    session[:workouts] = @workouts
+    @workouts = Workout.find_by(videoId: session[:workouts][0]["videoId"])
     redirect_to workout_path(@body_id)
   end
 
@@ -25,6 +28,7 @@ class WorkoutsController < ApplicationController
 
   def retrieve_videos(body_id, next_page)
     videos = api_call(body_id, next_page)
-    @workouts = pull_video_info(body_id, videos)
+    session[:workouts] = pull_video_info(body_id, videos)
+    p session[:workouts]
   end
 end

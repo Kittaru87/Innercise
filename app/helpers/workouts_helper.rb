@@ -84,7 +84,9 @@ module WorkoutsHelper
       'videoId' => '12345',
       'title' => 'mock video',
       'description' => 'test',
-      'channel' => 'mock channel'
+      'channel' => 'mock channel',
+      'nextPageToken' => 'asbdf',
+      'prevPageToken' => 'klsdj'
     }]
   end
 end

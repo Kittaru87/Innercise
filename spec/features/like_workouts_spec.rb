@@ -6,16 +6,16 @@ RSpec.feature 'like workouts', type: :feature do
 
   # let(:workout) { double :workout, id: 1 }
 
-  # before(:each) do
-  #   sign_up
-  #   click_link 'ARMS'
-  # end
+  before(:each) do
+    sign_up
+    click_link 'ARMS'
+  end
 
-  # it "won't throw an error when a video is liked" do
-  #   # sleep 10
-  #   # click_button 'Like'
-  #   # expect { page }.to_not raise_error
-  # end
+  it "won't throw an error when a video is liked" do
+    sleep 10
+    click_button 'Like'
+    expect { page }.to_not raise_error
+  end
 
   # it "will register a like" do
 
