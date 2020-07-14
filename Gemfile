@@ -30,7 +30,7 @@ gem 'devise'
 # To store more data in session than rails usually allows - this will store it in Active Record
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
-gem 'actionpack', '>= 6.0.3.1'
+gem 'actionpack', '>= 6.0.3.2'
 gem 'activestorage', '>= 6.0.3.1'
 gem 'activesupport', '>= 6.0.3.1'
 
@@ -72,6 +72,7 @@ group :test do
   gem 'simplecov-console', require: false
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
